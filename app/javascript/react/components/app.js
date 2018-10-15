@@ -1,7 +1,12 @@
+
 import React from 'react'
+import ShopIndexContainer from '../containers/ShopIndexContainer'
 
 export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+  return (
+  	<ShopIndexContainer
+  	/>
+  	)
 }
 
 export default App
