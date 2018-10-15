@@ -11,7 +11,8 @@ class ShopIndexContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/shops.json', {
+    fetch('/api/v1/shops.json', 
+    {
       credentials: 'same-origin', 
     })
       .then(response => {
@@ -44,7 +45,7 @@ class ShopIndexContainer extends Component {
       />)
     })
     return(
-      <div className='callout success'>
+      <div>
         {shops}
       </div>
       )
