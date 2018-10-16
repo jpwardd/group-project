@@ -4,4 +4,4 @@ class Api::V1::ShopsController < ApplicationController
 		render json: Shop.all
 	end
 
- end
+end
