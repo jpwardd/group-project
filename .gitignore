@@ -10,12 +10,13 @@
 # Ignore all logfiles and tempfiles.
 log/*
 tmp/*
+node_modules/*
 !/log/.keep
 !/tmp/.keep
 
 # Ignore uploaded files in development
-/storage/*
-!/storage/.keep
+storage/*
+!storage/.keep
 
 /node_modules
 /yarn-error.log
@@ -24,11 +25,11 @@ tmp/*
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+config/master.key
 .env
-/public/packs
-/public/packs-test
-/node_modules
+public/packs
+public/packs-test
+node_modules
 yarn-debug.log*
 .yarn-integrity
 coverage/*
