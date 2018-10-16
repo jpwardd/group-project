@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react'
-import ShopTile from '../components/ShopTile'
+import ShopIndexTile from '../components/ShopIndexTile'
 
 class ShopIndexContainer extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class ShopIndexContainer extends Component {
   render() {
     let shops = this.state.shops.map((shop) => {
       return(
-      <ShopTile
+      <ShopIndexTile
         key={shop.id}
         name={shop.name}
         address={shop.address}
