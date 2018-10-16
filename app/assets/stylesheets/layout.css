@@ -1,0 +1,17 @@
+.top-bar {
+  background-color: #4B244A;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #4b244a;
+    line-height: 2.8125rem;
+    padding: 0 0.9375rem;
+    color: black;
+}
+
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background repeat: no-repeat;
+  background-position: center center;
+}

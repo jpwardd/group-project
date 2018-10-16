@@ -15,8 +15,6 @@ feature 'user registers', %Q{
   scenario 'provide valid registration information' do
     visit new_user_registration_path
 
-    save_and_open_page
-
     fill_in 'First Name', with: "John"
     fill_in 'Last Name', with: "Smith"
     fill_in 'City', with: "Boston"
