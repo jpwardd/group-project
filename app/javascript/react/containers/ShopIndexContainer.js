@@ -4,7 +4,7 @@ import ShopIndexTile from '../components/ShopIndexTile'
 
 class ShopIndexContainer extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       shops: []
     }
@@ -17,18 +17,18 @@ class ShopIndexContainer extends Component {
     })
       .then(response => {
         if (response.ok) {
-          return response;
+          return response
         } else {
           let errorMessage = `${response.status} (${response.statusText})`,
             error = new Error(errorMessage);
-          throw error;
+          throw error
         }
       })
       .then(response => response.json())
       .then(data => {
         this.setState( { shops: data } )
       })
-      .catch(error => console.error(`Error in fetch: $(error.message)`))
+      .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
   render() {
@@ -36,6 +36,7 @@ class ShopIndexContainer extends Component {
       return(
       <ShopIndexTile
         key={shop.id}
+        id={shop.id}
         name={shop.name}
         address={shop.address}
         city={shop.city}

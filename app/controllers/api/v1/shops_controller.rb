@@ -4,4 +4,8 @@ class Api::V1::ShopsController < ApplicationController
 		render json: Shop.all
 	end
 
+	def show
+		render json: Shop.find(params[:id])
+	end
+
  end
