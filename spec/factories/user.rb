@@ -6,5 +6,6 @@ FactoryBot.define do
     password "thisismypassword.123"
     city "Boston"
     state "MA"
+    # avatar "#{Rails.root}/app/assets/images/pexels-photo.jpg"
   end
 end
