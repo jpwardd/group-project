@@ -7,5 +7,6 @@ FactoryBot.define do
     role "member"
     city "Boston"
     state "MA"
+    # avatar "#{Rails.root}/app/assets/images/pexels-photo.jpg"
   end
 end
