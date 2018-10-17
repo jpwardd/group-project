@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @review.user %>
+</p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @review.shop %>
+</p>
+
+<p>
+  <strong>Coffee:</strong>
+  <%= @review.coffee %>
+</p>
+
+<p>
+  <strong>Donut:</strong>
+  <%= @review.donut %>
+</p>
+
+<p>
+  <strong>Wifi:</strong>
+  <%= @review.wifi %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>
