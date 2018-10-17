@@ -4,13 +4,13 @@
   <title>DonutReviews</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  
+
     <%= javascript_include_tag "vendor/modernizr" %>
-  
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
@@ -19,6 +19,20 @@
     </ul>
 
     <section class="top-bar-section">
+      <ul class="left">
+        <div class="search-bar">
+          <%= form_tag(search_api_v1_shops_path, action: "search", method: "GET", class: "search-form") do %>
+
+            <div class="field">
+              <%= text_field_tag :shops, params[:shops], placeholder: "Enter shop..." %>
+            </div>
+            <div class="actions">
+              <%= submit_tag 'Search' %>
+            </div>
+          <% end %>
+        </div>
+      </ul>
+      
       <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
@@ -39,14 +53,14 @@
   <%= yield %>
 
   <%= javascript_include_tag 'application' %>
-  
-  <%- if Rails.env.development? || Rails.env.test? -%> 
+
+  <%- if Rails.env.development? || Rails.env.test? -%>
     <%= javascript_tag do %>
       window.railsEnv = '<%= Rails.env %>'
     <%- end -%>
   <%- end -%>
   <%= javascript_pack_tag 'application' %>
-  
+
   <%= yield :extra_footer %>
 </body>
 </html>

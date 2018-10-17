@@ -1,0 +1,5 @@
+.search-form {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 55em;
+}
