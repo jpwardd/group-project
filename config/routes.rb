@@ -6,10 +6,14 @@ Rails.application.routes.draw do
 
   namespace :api do
   	namespace :v1 do
-  		resources :shops, only: [:index, :show]
+      resources :shops, only: [:index, :show, :create] do
+        resources :reviews, only: [:index, :create]
+      end
+
   	end
   end
+
  
- get "*path", to: "homes#index" 
+ 	get "*path", to: "homes#index" 
  
 end

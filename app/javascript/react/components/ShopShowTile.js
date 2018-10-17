@@ -3,7 +3,6 @@ import React from 'react'
 
 
 const ShopShowTile = (props) => {
-	console.log(props)
 	return(
 		<div className="callout">
 			<div className="medium-6 columns">
