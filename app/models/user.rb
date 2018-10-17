@@ -63,6 +63,9 @@ class User < ApplicationRecord
   # validates_processing_of :avatar
   mount_uploader :avatar, AvatarUploader
 
+  has_many :reviews
+  has_many :shops, through: :reviews
+
   # user.admin?
   def admin?
     admin == true
