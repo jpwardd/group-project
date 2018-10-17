@@ -12,7 +12,7 @@ const ShopShowTile = (props) => {
 		</div>
 			<div className="row medium-6 large-5 columns">
 				<h1>{props.name}</h1>
-				<p >{props.address}</p>
+				<p>{props.address}</p>
 				<p>{props.city}, {props.state} {props.zip}</p>
 				<p>{props.phoneNumber}</p>
 			</div>
