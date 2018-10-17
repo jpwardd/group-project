@@ -56,9 +56,14 @@ class User < ApplicationRecord
     "WI",
     "WY"
   ]
-  
+
   validates_presence_of :first_name, :last_name, :city, :state
   validates_format_of [:first_name, :last_name, :city], {with: /\A[a-zA-Z]+\z/}
   validates :state, inclusion: { in: STATES }
+
+  # user.admin?
+  def admin?
+    admin == true
+  end
 
 end
