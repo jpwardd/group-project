@@ -1,8 +1,8 @@
 Started GET "/" for 127.0.0.1 at 2018-10-15 14:46:14 -0400
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "donut-reviews_development" does not exist
 ):
-  
+
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:688:in `rescue in connect'
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
@@ -52,10 +52,10 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-15 14:46:16 -0400
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "donut-reviews_development" does not exist
 ):
-  
+
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:688:in `rescue in connect'
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
@@ -105,10 +105,10 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-15 14:46:19 -0400
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "donut-reviews_development" does not exist
 ):
-  
+
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:688:in `rescue in connect'
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
 activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
@@ -443,7 +443,7 @@ Migrating to DeviseCreateUsers (20181015152037)
 Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-10-15 15:14:28 -0400
   [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/Minnie/.rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -451,7 +451,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
@@ -619,9 +619,9 @@ Completed 200 OK in 627ms (Views: 542.2ms | ActiveRecord: 0.7ms)
 
 
 Started POST "/users" for 127.0.0.1 at 2018-10-15 15:29:24 -0400
-  
+
 NameError (uninitialized constant User::AL):
-  
+
 app/models/user.rb:10:in `<class:User>'
 app/models/user.rb:1:in `<main>'
 config/routes.rb:3:in `block in <main>'
@@ -633,23 +633,23 @@ Processing by HomesController#index as HTML
 Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (uninitialized constant User::AL):
-    20: 
+    20:
     21:     <section class="top-bar-section">
     22:       <ul class="right">
     23:         <%- if current_user -%>
     24:           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
     25:         <%- else -%>
     26:           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-  
+
 app/models/user.rb:10:in `<class:User>'
 app/models/user.rb:1:in `<main>'
 app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb__1000784272335869630_70253810924100'
 Started GET "/" for 127.0.0.1 at 2018-10-15 15:29:36 -0400
-  
+
 NameError (uninitialized constant User::AL):
-  
+
 app/models/user.rb:10:in `<class:User>'
 app/models/user.rb:1:in `<main>'
 config/routes.rb:3:in `block in <main>'
@@ -662,11 +662,11 @@ Completed 200 OK in 454ms (Views: 428.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/users/sign_up" for 127.0.0.1 at 2018-10-15 15:34:02 -0400
-  
+
 SyntaxError (/Users/Minnie/Desktop/group-project/app/models/user.rb:10: dynamic constant assignment
     STATES = [
             ^):
-  
+
 app/models/user.rb:10: dynamic constant assignment
 config/routes.rb:3:in `block in <main>'
 config/routes.rb:1:in `<main>'
@@ -758,16 +758,16 @@ Processing by Devise::RegistrationsController#create as HTML
 Completed 500 Internal Server Error in 224ms (ActiveRecord: 1.5ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 2, expected 4..6)):
-    20: 
+    20:
     21:   <div class="field">
     22:     <%= f.label :state %><br />
     23:     <%= f.collection_select :state, User::STATES %>
     24:   </div>
-    25: 
+    25:
     26:   User::STATES
-  
+
 app/views/devise/registrations/new.html.erb:23:in `block in _app_views_devise_registrations_new_html_erb___4499418715804988091_70253828955980'
 app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___4499418715804988091_70253828955980'
 Started POST "/users" for 127.0.0.1 at 2018-10-15 16:00:05 -0400
@@ -795,16 +795,16 @@ Processing by Devise::RegistrationsController#create as HTML
 Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 3, expected 4..6)):
-    20: 
+    20:
     21:   <div class="field">
     22:     <%= f.label :state %><br />
     23:     <%= f.collection_select(:state, User::STATES, { include_blank: true }) %>
     24:   </div>
-    25: 
+    25:
     26:   User::STATES
-  
+
 app/views/devise/registrations/new.html.erb:23:in `block in _app_views_devise_registrations_new_html_erb___4499418715804988091_70253829690360'
 app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___4499418715804988091_70253829690360'
 Started POST "/users" for 127.0.0.1 at 2018-10-15 16:02:32 -0400
@@ -819,11 +819,11 @@ Processing by Devise::RegistrationsController#create as HTML
 Completed 500 Internal Server Error in 239ms (ActiveRecord: 15.7ms)
 
 
-  
+
 SyntaxError (/Users/Minnie/Desktop/group-project/app/views/devise/registrations/new.html.erb:23: syntax error, unexpected ')', expecting keyword_end
 ...ES), { include_blank: true }) );@output_buffer.safe_append='
 ...                               ^):
-  
+
 app/views/devise/registrations/new.html.erb:23: syntax error, unexpected ')', expecting keyword_end
 Started POST "/users" for 127.0.0.1 at 2018-10-15 16:02:45 -0400
 Processing by Devise::RegistrationsController#create as HTML
@@ -3226,9 +3226,9 @@ Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.2ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:12 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3266,9 +3266,9 @@ Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.6ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:14 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3306,9 +3306,9 @@ Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:16 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3346,9 +3346,9 @@ Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 2.1ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:18 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3386,9 +3386,9 @@ Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:27 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3426,9 +3426,9 @@ Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:32 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3466,9 +3466,9 @@ Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.9ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:34 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3520,9 +3520,9 @@ Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.0ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:37 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3560,9 +3560,9 @@ Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:38 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3600,9 +3600,9 @@ Completed 200 OK in 31ms (Views: 4.7ms | ActiveRecord: 26.3ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:23:39 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3696,9 +3696,9 @@ Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 7.3ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:24:11 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3729,9 +3729,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shops/undefined" for 127.0.0.1 at 2018-10-16 15:24:34 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shops/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3776,9 +3776,9 @@ Completed 200 OK in 64ms (Views: 22.2ms | ActiveRecord: 38.3ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:24:38 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3956,9 +3956,9 @@ Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 9.3ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:25:53 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3989,9 +3989,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/undefined" for 127.0.0.1 at 2018-10-16 15:26:08 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4036,9 +4036,9 @@ Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/api/v1/shop/undefined" for 127.0.0.1 at 2018-10-16 15:26:32 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4069,9 +4069,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/undefined" for 127.0.0.1 at 2018-10-16 15:26:52 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4116,9 +4116,9 @@ Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.5ms)
 
 
 Started GET "/api/v1/shops/undefined" for 127.0.0.1 at 2018-10-16 15:26:56 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/shops/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4149,9 +4149,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/undefined" for 127.0.0.1 at 2018-10-16 15:27:02 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4203,14 +4203,14 @@ Processing by Api::V1::ShopsController#show as */*
 Completed 404 Not Found in 7ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Shop with 'id'=undefined):
-  
+
 app/controllers/api/v1/shops_controller.rb:8:in `show'
 Started GET "/shop/undefined" for 127.0.0.1 at 2018-10-16 15:27:21 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4241,9 +4241,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/undefined" for 127.0.0.1 at 2018-10-16 15:27:53 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4288,9 +4288,9 @@ Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/shop/undefined" for 127.0.0.1 at 2018-10-16 15:27:55 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/undefined"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4364,9 +4364,9 @@ Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.6ms)
 
 
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:29:03 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/1"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4433,9 +4433,9 @@ Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:29:24 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/1"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4488,16 +4488,16 @@ Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/shop/3" for 127.0.0.1 at 2018-10-16 15:30:04 -0400
-  
+
 SyntaxError (/Users/Lance/challenges/group-project/config/routes.rb:13: syntax error, unexpected ':', expecting keyword_end
   get * to: "#homes/index"
            ^):
-  
+
 config/routes.rb:13: syntax error, unexpected ':', expecting keyword_end
 Started GET "/shop/3" for 127.0.0.1 at 2018-10-16 15:30:19 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/3"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4528,9 +4528,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/3" for 127.0.0.1 at 2018-10-16 15:30:22 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/3"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4561,9 +4561,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/3" for 127.0.0.1 at 2018-10-16 15:30:23 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/3"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4594,9 +4594,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:25 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4627,9 +4627,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:26 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4660,9 +4660,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:27 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4693,9 +4693,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:28 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4726,9 +4726,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:28 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4759,9 +4759,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:28 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4792,11 +4792,11 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:28 -0400
-  
+
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:28 -0400
 ActionController::RoutingError (No route matches [GET] "/"):
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/"):
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:29 -0400
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
@@ -4828,8 +4828,8 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-  
-  
+
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4860,7 +4860,7 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4891,9 +4891,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:40 -0400
-  
+
 ArgumentError ('' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
-  
+
 config/routes.rb:13:in `block in <main>'
 config/routes.rb:2:in `<main>'
 Started GET "/" for 127.0.0.1 at 2018-10-16 15:30:42 -0400
@@ -4934,9 +4934,9 @@ Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/shop/2" for 127.0.0.1 at 2018-10-16 15:30:47 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/2"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4967,9 +4967,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/2" for 127.0.0.1 at 2018-10-16 15:30:48 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/2"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -5000,9 +5000,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/2" for 127.0.0.1 at 2018-10-16 15:30:50 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/2"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -5055,9 +5055,9 @@ Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:31:35 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/1"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -5356,15 +5356,15 @@ Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:33:33 -0400
-  
+
 ArgumentError ('' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
-  
+
 config/routes.rb:13:in `block in <main>'
 config/routes.rb:2:in `<main>'
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:33:35 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/1"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -5395,9 +5395,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:33:36 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/1"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -5428,9 +5428,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:33:37 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/1"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -5461,22 +5461,22 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:34:06 -0400
-  
+
 SyntaxError (/Users/Lance/challenges/group-project/config/routes.rb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_end
   get '/shop/:id' to: "/api/v1/shops#show"
                     ^):
-  
+
 config/routes.rb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_end
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:34:14 -0400
-  
+
 ArgumentError ('/api/v1/shops' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
-  
+
 config/routes.rb:13:in `block in <main>'
 config/routes.rb:2:in `<main>'
 Started GET "/shop/1" for 127.0.0.1 at 2018-10-16 15:34:17 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/shop/1"):
-  
+
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -7171,7 +7171,7 @@ rubocop \
 Started GET "/" for 127.0.0.1 at 2018-10-16 16:31:56 -0400
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/jwardd/.gem/ruby/2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -7179,7 +7179,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
@@ -11723,5 +11723,3 @@ Processing by Api::V1::ShopsController#show as */*
   [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/controllers/api/v1/shops_controller.rb:8
 Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.6ms)
-
-
