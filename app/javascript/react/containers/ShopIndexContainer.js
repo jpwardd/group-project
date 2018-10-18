@@ -11,7 +11,7 @@ class ShopIndexContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/shops.json', 
+    fetch('/api/v1/shops', 
     {
       credentials: 'same-origin', 
     })
