@@ -5,7 +5,8 @@ class ShopIndexContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      shops: []
+      shops: [],
+      shopFilter: '',
     }
   }
 
@@ -30,25 +31,43 @@ class ShopIndexContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
-  render() {
-
-    let shops = this.state.shops.map((shop) => {
-      return(
-      <ShopIndexTile
-        key={shop.id}
-        id={shop.id}
-        name={shop.name}
-        address={shop.address}
-        city={shop.city}
-        state={shop.state}
-        zip={shop.zip}
-        phoneNumber={shop.phone_number}
-        image={shop.image_url}
-      />)
+  handleShopFilterChange = (e) => {
+    const search = e.target.value
+    this.setState({
+      shopFilter: search
     })
+  }
+
+  filterShops = (shops) => {
+    const { shopFilter } = this.state
+    return shops.filter(shop => shop.name.toLowerCase().indexOf(shopFilter.toLowerCase()) > -1)
+  }
+
+  render() {
+    const { shops, shopFilter } = this.state
+
     return(
       <div>
-        {shops}
+        <div>
+          <input
+            type="text"
+            value={shopFilter}
+            placeholder="Type to filter on name"
+            onChange={this.handleShopFilterChange}
+          />
+        </div>
+        {
+          this.filterShops(shops).map((shop) => <ShopIndexTile
+            key={shop.id}
+            id={shop.id}
+            name={shop.name}
+            address={shop.address}
+            city={shop.city}
+            state={shop.state}
+            zip={shop.zip}
+            phoneNumber={shop.phone_number}
+          />)
+        }
       </div>
       )
   }
