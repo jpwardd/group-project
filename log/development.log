@@ -61197,3 +61197,1318 @@ Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 2.4ms)
 Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 5.2ms)
 
 
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:8)
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:24:45 -0400
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/launchacademy/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:8)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6974092177755640560)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateReviews (20181017195652)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (34.2ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_id" bigint NOT NULL, "shop_id" bigint NOT NULL, "donut_review" character varying NOT NULL, "coffee_review" character varying NOT NULL, "shop_review" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181017195652_create_reviews.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6974092177755640560)[0m
+  ↳ bin/rails:4
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:8)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (8452.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "donut-reviews_development"[0m
+  ↳ bin/rails:4
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:8)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (313.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "donut-reviews_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (287.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "donut-reviews_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (616.3ms)[0m  [1m[35mCREATE DATABASE "donut-reviews_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (686.3ms)[0m  [1m[35mCREATE DATABASE "donut-reviews_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (48.6ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_id" bigint NOT NULL, "shop_id" bigint NOT NULL, "donut_review" character varying NOT NULL, "coffee_review" character varying NOT NULL, "shop_review" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_shop_id" ON "reviews"  ("shop_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_user_id" ON "reviews"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "shops" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying NOT NULL, "address" character varying NOT NULL, "city" character varying NOT NULL, "state" character varying NOT NULL, "zip" character varying NOT NULL, "phone_number" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:41
+  [1m[35m (26.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "city" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "encrypted_password" character varying NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "failed_attempts" integer DEFAULT 0 NOT NULL, "unlock_token" character varying, "locked_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_unlock_token" ON "users"  ("unlock_token")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181017195652)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181016190415),
+(20181015152037);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (3.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-19 02:25:47.602296"], ["updated_at", "2018-10-19 02:25:47.602296"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_id" bigint NOT NULL, "shop_id" bigint NOT NULL, "donut_review" character varying NOT NULL, "coffee_review" character varying NOT NULL, "shop_review" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_shop_id" ON "reviews"  ("shop_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_user_id" ON "reviews"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "shops" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying NOT NULL, "address" character varying NOT NULL, "city" character varying NOT NULL, "state" character varying NOT NULL, "zip" character varying NOT NULL, "phone_number" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:41
+  [1m[35m (27.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "city" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "encrypted_password" character varying NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "failed_attempts" integer DEFAULT 0 NOT NULL, "unlock_token" character varying, "locked_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_unlock_token" ON "users"  ("unlock_token")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181017195652)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181016190415),
+(20181015152037);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-19 02:25:47.927819"], ["updated_at", "2018-10-19 02:25:47.927819"]]
+  ↳ db/schema.rb:13
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (3.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-10-19 02:25:47.941756"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mShop Create (1.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "address", "city", "state", "zip", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dunkin' Donuts"], ["address", "101 Summer Street"], ["city", "Boston"], ["state", "MA"], ["zip", "02110"], ["phone_number", "6173388141"], ["created_at", "2018-10-19 02:25:48.104429"], ["updated_at", "2018-10-19 02:25:48.104429"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "address", "city", "state", "zip", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Blackbird Doughnuts"], ["address", "492 Tremont St"], ["city", "Boston"], ["state", "MA"], ["zip", "02116"], ["phone_number", "6174829000"], ["created_at", "2018-10-19 02:25:48.111522"], ["updated_at", "2018-10-19 02:25:48.111522"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "address", "city", "state", "zip", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Holy Donut"], ["address", "7 Exchange St"], ["city", "Portland"], ["state", "ME"], ["zip", "04101"], ["phone_number", "2077757776"], ["created_at", "2018-10-19 02:25:48.117381"], ["updated_at", "2018-10-19 02:25:48.117381"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tj@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (4.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "city", "state", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Timothy"], ["last_name", "Johnson"], ["city", "Birmingham"], ["state", "AL"], ["email", "tj@gmail.com"], ["encrypted_password", "$2a$11$7tCKxkvnxoBVh1Vh2qfiv.ggbM2j/76.lcCdYPaA06ay79/d8/WzW"], ["created_at", "2018-10-19 02:25:48.347585"], ["updated_at", "2018-10-19 02:25:48.347585"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mReview Create (2.0ms)[0m  [1m[32mINSERT INTO "reviews" ("user_id", "shop_id", "donut_review", "coffee_review", "shop_review", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["shop_id", 2], ["donut_review", "Yum yum"], ["coffee_review", "Good good"], ["shop_review", "Everything was fantastic, my experience was superb and the staff went above and beyond the requirements set by social standards"], ["created_at", "2018-10-19 02:25:48.460698"], ["updated_at", "2018-10-19 02:25:48.460698"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:8)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6974092177755640560)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6974092177755640560)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:8)
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:26:06 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/launchacademy/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 15271ms (Views: 15248.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:26:23 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (74.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 225ms (Views: 31.5ms | ActiveRecord: 115.5ms)
+
+
+Started GET "/api/v1/shops/1" for 127.0.0.1 at 2018-10-18 22:26:29 -0400
+Started GET "/api/v1/shops/1/reviews" for 127.0.0.1 at 2018-10-18 22:26:29 -0400
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (8.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 26ms (Views: 3.3ms | ActiveRecord: 10.2ms)
+
+
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"1"}
+  [1m[36mShop Load (2.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (4.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 74ms (Views: 11.0ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2018-10-18 22:29:40 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 995ms (Views: 969.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:33:14 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 608ms (Views: 591.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:33:38 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 406ms (Views: 397.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:33:40 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:33:44 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 352ms (Views: 347.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:33:45 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (4.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:33:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 306ms (Views: 300.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:33:50 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:34:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 584ms (Views: 576.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:35:26 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 315ms (Views: 308.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:35:42 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 549ms (Views: 544.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:35:43 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (8.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 24ms (Views: 13.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:35:49 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 461ms (Views: 455.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:35:50 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2018-10-18 22:36:20 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 725ms (Views: 717.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:36:22 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2018-10-18 22:37:52 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 998ms (Views: 989.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2018-10-18 22:38:00 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 221ms (Views: 216.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2018-10-18 22:38:58 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 639ms (Views: 629.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2018-10-18 22:39:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 539ms (Views: 532.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2018-10-18 22:41:13 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 3141c8162e36ded1682e
+Version: webpack 3.12.0
+Time: 9517ms
+                                  Asset       Size  Chunks                    Chunk Names
+    application-036d3553f3f86dfe21e3.js    1.14 MB       0  [emitted]  [big]  application
+application-036d3553f3f86dfe21e3.js.map    1.26 MB       0  [emitted]         application
+                          manifest.json  142 bytes          [emitted]         
+ [113] ./app/javascript/packs/application.js 605 bytes {0} [built]
+ [240] ./app/javascript/react/containers/ShopIndexContainer.js 3.28 kB {0} [built]
+ [242] ./app/javascript/react/containers/ShopShowContainer.js 3.47 kB {0} [built]
+ [244] ./app/javascript/react/containers/ReviewShowContainer.js 4.48 kB {0} [built]
+ [245] ./app/javascript/react/containers/ReviewFormContainer.js 4.49 kB {0} [built]
+    + 249 hidden modules
+
+ERROR in ./app/javascript/react/components/ShopIndexTile.js
+Module not found: Error: Can't resolve 'react-router-dom' in '/Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/app/javascript/react/components'
+ @ ./app/javascript/react/components/ShopIndexTile.js 4:0-40
+ @ ./app/javascript/react/containers/ShopIndexContainer.js
+ @ ./app/javascript/react/components/app.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 16377ms (Views: 16366.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:41:38 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 477ms (Views: 464.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:42:04 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 514ms (Views: 504.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:42:07 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (4.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:51:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1042ms (Views: 1016.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:51:47 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (9.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 22ms (Views: 10.6ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:52:25 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 472ms (Views: 465.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:52:26 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:52:35 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 634ms (Views: 625.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:52:37 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:53:19 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 721ms (Views: 713.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:53:29 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 714ms (Views: 706.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:53:31 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (15.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 36ms (Views: 15.2ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:54:08 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 571ms (Views: 565.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:54:11 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (3.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:54:15 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 592ms (Views: 586.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:54:18 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:54:20 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 339ms (Views: 333.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:54:22 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:57:52 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 928ms (Views: 914.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:57:54 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (226.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 255ms (Views: 26.2ms | ActiveRecord: 226.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-18 22:58:27 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 285ms (Views: 277.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-18 22:58:29 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (20.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 26ms (Views: 4.7ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/api/v1/shops/1" for 127.0.0.1 at 2018-10-19 00:02:24 -0400
+Started GET "/api/v1/shops/1/reviews" for 127.0.0.1 at 2018-10-19 00:02:24 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (13.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 34ms (Views: 10.9ms | ActiveRecord: 13.4ms)
+
+
+  [1m[36mShop Load (35.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (19.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 82ms (Views: 7.7ms | ActiveRecord: 54.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-19 00:02:27 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 333ms (Views: 318.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-19 00:02:28 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-19 00:02:31 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-19 00:02:31 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 293ms (Views: 144.1ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-19 00:02:35 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 137ms (Views: 132.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-19 00:02:36 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/3/reviews" for 127.0.0.1 at 2018-10-19 00:02:38 -0400
+Started GET "/api/v1/shops/3" for 127.0.0.1 at 2018-10-19 00:02:38 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"3"}
+  Parameters: {"id"=>"3"}
+  [1m[36mShop Load (1.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (4.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 4.2ms)
+
+
+  [1m[36mReview Load (4.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 3]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 12ms (Views: 3.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-19 00:02:40 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 237ms (Views: 232.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-19 00:02:41 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/launchacademy/challenges/onsite_curriculum/week7/carrierwave/group-project/spec/factories/user.rb:8)
+  [1m[35m (8426.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "donut-reviews_development"[0m
+  ↳ bin/rails:4
