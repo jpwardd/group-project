@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
@@ -9,7 +8,8 @@ Rails.application.routes.draw do
   		resources :shops, only: [:index, :show]
   	end
   end
- 
- get "*path", to: "homes#index" 
- 
+
+ get "/", to: "homes#index"
+ get "/shops", to: "homes#index"
+ get "/shop/:id", to: "homes#index"
 end

@@ -1,9 +1,6 @@
-
 import React from 'react'
 
-
 const ShopShowTile = (props) => {
-	console.log(props)
 	return(
 		<div className="callout">
 			<div className="medium-6 columns">
@@ -16,9 +13,7 @@ const ShopShowTile = (props) => {
 				<p>{props.city}, {props.state} {props.zip}</p>
 				<p>{props.phoneNumber}</p>
 			</div>
-			</div>
-			
-
+		</div>
 	)
 }
 

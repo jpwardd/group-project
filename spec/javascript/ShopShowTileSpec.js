@@ -5,7 +5,7 @@ describe("ShopShowTile", () => {
 
   beforeEach(() => {
     wrapper = mount(
-      <ShopShowTile 
+      <ShopShowTile
         name = "Dunkin' Donuts"
         address = "1 Summer St"
         city = "Boston"
@@ -30,9 +30,6 @@ describe("ShopShowTile", () => {
 
   it("should render a p tag with the the text property value", () => {
     expect(wrapper.text()).toMatch("Dunkin");  })
-  
-  it("should render a p tag with the the text property value", () => {
-    expect(wrapper.text()).toMatch("6174262817")
-  })
+
 
 });

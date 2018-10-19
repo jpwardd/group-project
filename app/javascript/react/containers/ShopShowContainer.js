@@ -44,7 +44,6 @@ class ShopShowContainer extends Component {
   			zip={this.state.shop.zip}
   			phoneNumber={this.state.shop.phone_number}
   		/>
-
 		)
   }
 }

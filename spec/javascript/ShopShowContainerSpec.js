@@ -8,7 +8,7 @@ describe("ShopShowContainer", () => {
   let wrapper;
   let shops;
   beforeEach(() => {
-  
+
     jasmineEnzyme();
     shops = {
       id: 2,
@@ -24,20 +24,31 @@ describe("ShopShowContainer", () => {
       body: shops
     });
     wrapper = mount(<ShopShowContainer params={{ id: 2 }}/>);
-    console.log(wrapper.debug())
   });
 
   afterEach(fetchMock.restore);
-  
+
   describe("show page", () => {
-    fit("should render a ShopShowTile component", done => {
+    it("should render a ShopShowTile component", done => {
       setTimeout(() => {
         expect(wrapper.find(ShopShowTile)).toBePresent();
         done();
       }, 0);
     });
   });
+  it('should have the specified initial state', () => {
+    expect(wrapper.state()).toEqual({ shop: {} });
+  })
+  it('should render the ShopShowTile Component with specific props', () => {
+      wrapper.setState({ shop: shops });
+      expect(wrapper.find(ShopShowTile).props()).toEqual({
+        id: 2,
+        name: "Dunkin' Donuts",
+        address: "1 Summer Street",
+        city: "Boston",
+        state: "MA",
+        zip: "02110",
+        phoneNumber: "6174262817"
+      })
+    })
 });
-
-
-
