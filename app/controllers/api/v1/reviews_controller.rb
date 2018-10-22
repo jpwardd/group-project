@@ -1,11 +1,16 @@
-
 class Api::V1::ReviewsController < ApplicationController
 	protect_from_forgery unless: -> { request.format.json? }
+
 
 	def index
 		shop = Shop.find(params[:shop_id])
 		reviews = shop.reviews
 
+		render json: reviews
+	end
+
+	def show
+		reviews = Review.find(params[:id])
 		render json: reviews
 	end
 
@@ -22,12 +27,28 @@ class Api::V1::ReviewsController < ApplicationController
 
 	end
 
+	def destroy
+	
+		Review.destroy(params[:id])
+	end
+
 
 	private
+
+	def authorize_delete
+		if current_user = !Review.find(params[:id])
+			raise ActionController::RoutingError.new("Not Found")
+		end
+	end
 
 	def review_params
 		params.require(:review).permit(:donut_review, :coffee_review, :shop_review)
 	end
 
+  def authorize_user
+    if !user_signed_in? || !current_user.admin?
+      raise ActionController::RoutingError.new("Not Found")
+    end
+  end
 
 end

@@ -10,6 +10,8 @@ class ReviewShowContainer extends Component {
 			reviews: []
 		}
     this.addNewReview = this.addNewReview.bind(this)
+		this.handleDelete = this.handleDelete.bind(this)
+		this.deleteReview = this.deleteReview.bind(this)
 	}
 
 	componentDidMount() {
@@ -60,6 +62,36 @@ class ReviewShowContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
+		handleDelete(id){
+		fetch(`http://localhost:3000/api/v1/shops/${this.props.shopId}/reviews/${id}`,
+		{
+			method: 'DELETE',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json' } ,
+			credentials: 'same-origin'
+		})
+		.then(response => {
+			if (response.ok) {
+				alert("Review was deleted!")
+				this.deleteReview(id)
+			}
+			else {
+				console.log(this.props.shopId)
+				let errorMessage = `${response.status} (${response.statusText})`,
+					error = new Error(errorMessage)
+				throw error
+			}
+		})
+	}
+
+	deleteReview(id){
+    let newReview = this.state.reviews.filter((review) => review.id !== id)
+    this.setState({
+      reviews: newReview
+    })
+  }
+
 	render() {
     let reviews = this.state.reviews.map((review) => {
     	return(
@@ -69,16 +101,18 @@ class ReviewShowContainer extends Component {
 	        donutReview={review.donut_review}
 	        coffeeReview={review.coffee_review}
 	        shopReview={review.shop_review}
+					handleDelete={this.handleDelete}
 	      />
       )
     })
 
 		return(
 			<div>
-        {reviews}
 	      <ReviewFormContainer
 	        addNewReview={this.addNewReview}
 	      />
+				{reviews}
+
       </div>
 		)
 	}
