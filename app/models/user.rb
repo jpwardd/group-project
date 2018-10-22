@@ -65,4 +65,8 @@ class User < ApplicationRecord
   validates :state, inclusion: { in: STATES }
   validates :role, null: false
 
+  def admin?
+    role == "admin"
+  end
+  
 end

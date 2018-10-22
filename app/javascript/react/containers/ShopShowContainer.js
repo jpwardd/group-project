@@ -7,7 +7,8 @@ class ShopShowContainer extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			shop: {}
+			shop: {},
+			currentUserId: null
 		}
 	}
 
@@ -28,7 +29,10 @@ class ShopShowContainer extends Component {
       })
       .then(response => response.json())
       .then(data => {
-        this.setState( { shop: data } )
+        this.setState( {
+					shop: data,
+					currentUserId: data.current_user_id
+				} )
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }

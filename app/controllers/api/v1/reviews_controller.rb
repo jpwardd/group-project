@@ -28,17 +28,24 @@ class Api::V1::ReviewsController < ApplicationController
 	end
 
 	def destroy
-		authorize_delete
-		Review.destroy(params[:id])
+		if authorize_delete
+			Review.destroy(params[:id])
+		else
+			render json: {error: "You are not authorized."}
+		end
 	end
 
 
 	private
 
 	def authorize_delete
-		if current_user != Review.find(params[:id]).user
-			raise ActionController::RoutingError.new("Not Found")
-		end
+		# binding.pry
+		# if current_user == Review.find(params[:id]).user || current_user.admin?
+		# 	# raise ActionController::RoutingError.new("Not Found")
+		# else
+		# 	raise ActionController::RoutingError.new("Not Found")
+		# end
+		 current_user == Review.find(params[:id]).user || current_user.admin?
 	end
 
 	def review_params

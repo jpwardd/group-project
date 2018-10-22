@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
@@ -12,7 +11,6 @@ Rails.application.routes.draw do
 
   	end
   end
-
 
  	get "*path", to: "homes#index"
 

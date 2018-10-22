@@ -62,7 +62,7 @@ class ReviewShowContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
-		handleDelete(id){
+	handleDelete(id){
 		fetch(`http://localhost:3000/api/v1/shops/${this.props.shopId}/reviews/${id}`,
 		{
 			method: 'DELETE',
