@@ -13550,3 +13550,81 @@ Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 8.3ms)
 Completed 200 OK in 66ms (Views: 7.4ms | ActiveRecord: 57.6ms)
 
 
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:54:04 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  text-align: ": expected expression (e.g. 1px, bold), was ";"):
+    3: <head>
+    4:   <title>DonutReviews</title>
+    5:   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    6:   <%= stylesheet_link_tag 'application', media: 'all' %>
+    7:   
+    8:     <%= javascript_include_tag "vendor/modernizr" %>
+    9:   
+  
+app/assets/stylesheets/review.scss:5
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2445209742069691126_70272111646140'
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:54:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ameliakim/.gem/ruby/2.3.8/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/ameliakim/Desktop/group-project/public/packs
+Completed 200 OK in 3959ms (Views: 3953.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:54:15 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ameliakim/.gem/ruby/2.3.8/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 138ms (Views: 119.2ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:54:16 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ameliakim/.gem/ruby/2.3.8/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:54:17 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:54:17 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (3.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ameliakim/.gem/ruby/2.3.8/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ameliakim/.gem/ruby/2.3.8/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Shop (0.87ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 5.7ms)
+
+
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ /Users/ameliakim/.gem/ruby/2.3.8/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/ameliakim/.gem/ruby/2.3.8/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.95ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 5.3ms)
+
+
