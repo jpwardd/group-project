@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_17_195652) do
+ActiveRecord::Schema.define(version: 2018_10_22_143133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "doots", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "review_id", null: false
+    t.boolean "user_doot"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_doots_on_review_id"
+    t.index ["user_id"], name: "index_doots_on_user_id"
+  end
 
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -23,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_10_17_195652) do
     t.string "shop_review", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "doot_score", default: 0, null: false
     t.index ["shop_id"], name: "index_reviews_on_shop_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end

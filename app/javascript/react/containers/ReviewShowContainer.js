@@ -60,6 +60,15 @@ class ReviewShowContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
+	upDoot(event) {
+		this.state.review.doot_score += 1
+		this.setState( { reviews: this.state.reviews } )
+	}
+
+	downDoot(event) {
+
+	}
+
 	render() {
     let reviews = this.state.reviews.map((review) => {
     	return(
@@ -69,6 +78,7 @@ class ReviewShowContainer extends Component {
 	        donutReview={review.donut_review}
 	        coffeeReview={review.coffee_review}
 	        shopReview={review.shop_review}
+					doot_score={review.doot_score}
 	      />
       )
     })
