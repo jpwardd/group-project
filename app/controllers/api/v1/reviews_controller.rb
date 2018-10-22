@@ -28,7 +28,7 @@ class Api::V1::ReviewsController < ApplicationController
 	end
 
 	def destroy
-	
+		authorize_delete
 		Review.destroy(params[:id])
 	end
 
@@ -36,13 +36,13 @@ class Api::V1::ReviewsController < ApplicationController
 	private
 
 	def authorize_delete
-		if current_user = !Review.find(params[:id])
+		if current_user != Review.find(params[:id]).user
 			raise ActionController::RoutingError.new("Not Found")
 		end
 	end
 
 	def review_params
-		params.require(:review).permit(:donut_review, :coffee_review, :shop_review)
+		params.require(:review).permit(:donut_review, :coffee_review, :shop_review, user: current_user)
 	end
 
   def authorize_user

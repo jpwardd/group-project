@@ -59,9 +59,10 @@ class User < ApplicationRecord
 
   has_many :reviews
   has_many :shops, through: :reviews
-  
+
   validates_presence_of :first_name, :last_name, :city, :state
   validates_format_of [:first_name, :last_name, :city], {with: /\A[a-zA-Z]+\z/}
   validates :state, inclusion: { in: STATES }
+  validates :role, null: false
 
 end

@@ -22,7 +22,7 @@ class ReviewFormContainer extends Component {
 	}
 
 	handleFormClear(event) {
-		this.setState( { 
+		this.setState( {
       donutReview: '',
       coffeeReview: '',
       shopReview: ''

@@ -7,7 +7,7 @@ class ReviewShowContainer extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			reviews: []
+			reviews: [],
 		}
     this.addNewReview = this.addNewReview.bind(this)
 		this.handleDelete = this.handleDelete.bind(this)
@@ -102,10 +102,11 @@ class ReviewShowContainer extends Component {
 	        coffeeReview={review.coffee_review}
 	        shopReview={review.shop_review}
 					handleDelete={this.handleDelete}
+					firstName={review.user.first_name}
+					lastName={review.user.last_name}
 	      />
       )
     })
-
 		return(
 			<div>
 	      <ReviewFormContainer
