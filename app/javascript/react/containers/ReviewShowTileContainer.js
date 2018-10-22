@@ -7,26 +7,28 @@ class ReviewShowTileContainer extends Component{
 		this.state = {
 			review: props.review,
 			comments: [],
-			userDoot: nil
+			upDoot: false,
+			downDoot: false
 		}
 
-		this.upDoot = this.upDoot.bind(this)
+		this.toUpDoot = this.toUpDoot.bind(this)
 	}
 
-	upDoot(event) {
+	toUpDoot(event) {
+		if this.state.upDoot == true
 		this.state.review.doot_score += 1
 		this.setState( { reviews: this.state.reviews } )
 	}
 
-	downDoot(event) {
+	toDownDoot(event) {
 
 	}
 
 	render() {
-		let upDoot = () => this.upDoot(event)
+		let toUpDoot = () => this.toUpDoot(event)
 		return(
 			<div key={this.state.review.id}>
-				<i className="fa fa-arrow-up fa-2x" onClick={upDoot}></i>
+				<i className="fa fa-arrow-up fa-2x" onClick={toUpDoot}></i>
 				<p>{this.state.review.doot_score}</p>
 				<i className="fa fa-arrow-down fa-2x"></i>
 
