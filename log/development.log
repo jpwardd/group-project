@@ -71934,3 +71934,1135 @@ Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 3.6ms)
 Completed 200 OK in 16ms (Views: 6.3ms | ActiveRecord: 6.9ms)
 
 
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+first_name { "Amelia" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/Lance/challenges/group-project/spec/factories/user.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+last_name { "Kim" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/Lance/challenges/group-project/spec/factories/user.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "ameliamjkim@gmail.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/Lance/challenges/group-project/spec/factories/user.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "thisismypassword.123" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/Lance/challenges/group-project/spec/factories/user.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+city { "Boston" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/Lance/challenges/group-project/spec/factories/user.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+state { "MA" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/Lance/challenges/group-project/spec/factories/user.rb:8)
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:39:44 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Lance/.gem/ruby/2.4.5/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 7173ms (Views: 7151.8ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:42:39 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:04 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 93ms (Views: 87.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:12 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 89ms (Views: 82.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:43:12 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (39.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 118ms (Views: 35.1ms | ActiveRecord: 73.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:15 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 96ms (Views: 92.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:43:15 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:17 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:43:17 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:18 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:43:18 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:25 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 122ms (Views: 117.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:26 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:43:26 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:43:41 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 95ms (Views: 88.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:43:42 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:45:10 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:45:10 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:45:20 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 86ms (Views: 81.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:45:20 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (2.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 15:45:25 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 78ms (Views: 75.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 15:45:26 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (4.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:45:26 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:45:26 -0400
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+Completed 200 OK in 42ms (Views: 0.5ms | ActiveRecord: 37.2ms)
+
+
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 70ms (Views: 25.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:45:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 74ms (Views: 70.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:45:28 -0400
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:45:28 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+  [1m[36mShop Load (7.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 25ms (Views: 1.1ms | ActiveRecord: 18.9ms)
+
+
+  [1m[36mShop Load (6.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 18ms (Views: 5.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:46:38 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:46:39 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:46:39 -0400
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (7.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShop Load (5.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 5.5ms)
+
+
+  [1m[36mReview Load (2.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 18ms (Views: 4.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:46:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:46:59 -0400
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:46:59 -0400
+Processing by Api::V1::ShopsController#show as */*
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mShop Load (3.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (2.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:48:07 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 104ms (Views: 99.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:48:07 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:48:07 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (2.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:48:09 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:48:09 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:48:09 -0400
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by Api::V1::ShopsController#show as */*
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:48:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:48:49 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:48:49 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (4.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mReview Load (20.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 30ms (Views: 7.6ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:49:15 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 81ms (Views: 77.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:49:16 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:49:16 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mReview Load (7.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 14ms (Views: 3.9ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:49:29 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:49:30 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:49:30 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mShop Load (29.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 37ms (Views: 5.5ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:49:31 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:49:32 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:49:32 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (2.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (1.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mReview Load (7.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 16ms (Views: 3.6ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:49:58 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:49:59 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:49:59 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mReview Load (11.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 18ms (Views: 3.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:50:10 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 72ms (Views: 68.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:50:10 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:50:11 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:50:11 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (2.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (2.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mReview Load (8.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 16ms (Views: 3.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:51:21 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 62ms (Views: 56.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:51:21 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:51:21 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 15:53:35 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 15:53:35 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 15:53:35 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mShop Load (4.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (11.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 22ms (Views: 4.3ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:07:04 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 71ms (Views: 66.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:07:04 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:07:04 -0400
+  [1m[36mShop Load (2.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 6.4ms)
+
+
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (43.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 46ms (Views: 0.9ms | ActiveRecord: 43.2ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:07:08 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 63ms (Views: 56.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:07:08 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:07:08 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mShop Load (2.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:07:23 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:07:24 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:07:24 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (2.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (3.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mReview Load (7.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 15ms (Views: 3.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:08:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 190ms (Views: 173.3ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:08:35 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:08:35 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (2.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (2.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mReview Load (2.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:10:00 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 177ms (Views: 163.4ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:10:01 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:10:01 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (12.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (3.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 21ms (Views: 3.7ms | ActiveRecord: 15.8ms)
+
+
+  [1m[36mShop Load (24.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 31ms (Views: 0.8ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:24:19 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 53ms (Views: 47.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:24:20 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:24:20 -0400
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (2.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (2.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mReview Load (2.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 13ms (Views: 4.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:33:36 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 79ms (Views: 73.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:33:37 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:33:37 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+  [1m[36mShop Load (2.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 7.1ms)
+
+
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (1.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:35:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 94ms (Views: 88.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:35:45 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:35:45 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (6.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 6.6ms)
+
+
+  [1m[36mShop Load (2.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 18ms (Views: 3.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:36:24 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 88ms (Views: 84.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:36:24 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:36:24 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (2.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mReview Load (2.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:36:56 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 88ms (Views: 84.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:36:57 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:36:57 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (1.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:40:07 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 74ms (Views: 70.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:40:21 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 74ms (Views: 69.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:40:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 84ms (Views: 80.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:40:34 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:40:34 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 13ms (Views: 3.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:40:34 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:40:35 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:40:35 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mReview Load (2.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 11ms (Views: 5.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 16:40:41 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/shops" for 127.0.0.1 at 2018-10-22 16:40:41 -0400
+Processing by Api::V1::ShopsController#index as */*
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/controllers/api/v1/shops_controller.rb:6
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:40:42 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:40:42 -0400
+Processing by Api::V1::ReviewsController#index as */*
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"shop_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (2.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mReview Load (1.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:40:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 61ms (Views: 56.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:40:46 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:40:46 -0400
+Processing by Api::V1::ShopsController#show as */*
+  Parameters: {"id"=>"2"}
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+  [1m[36mShop Load (2.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mShop Load (8.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (10.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 26ms (Views: 4.5ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:40:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 103ms (Views: 97.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:40:50 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:40:50 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (1.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mReview Load (3.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 5.2ms)
+
+
+  [1m[36mShop Load (3.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2018-10-22 16:41:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"shops/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 89ms (Views: 84.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/shops/2/reviews" for 127.0.0.1 at 2018-10-22 16:41:12 -0400
+Started GET "/api/v1/shops/2" for 127.0.0.1 at 2018-10-22 16:41:12 -0400
+Processing by Api::V1::ReviewsController#index as */*
+  Parameters: {"shop_id"=>"2"}
+Processing by Api::V1::ShopsController#show as */*
+  [1m[36mShop Load (1.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+  ↳ app/controllers/api/v1/reviews_controller.rb:6
+  [1m[36mShop Load (1.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/shops_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shop_id" = $1[0m  [["shop_id", 2]]
+  ↳ app/controllers/api/v1/reviews_controller.rb:9
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 2.4ms)
+
+

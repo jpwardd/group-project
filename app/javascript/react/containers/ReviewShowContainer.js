@@ -66,6 +66,7 @@ class ReviewShowContainer extends Component {
 	      <ReviewShowTileContainer
           key={review.id}
           review={review}
+          shopId={this.props.shopId}
 	      />
       )
     })

@@ -7,30 +7,87 @@ class ReviewShowTileContainer extends Component{
 		this.state = {
 			review: props.review,
 			comments: [],
-			upDoot: false,
-			downDoot: false
+			doot_boolean: null
 		}
-
-		this.toUpDoot = this.toUpDoot.bind(this)
+		this.upDoot = this.upDoot.bind(this)
+		this.downDoot = this.downDoot.bind(this)
+		this.toDootOrNotToDoot = this.toDootOrNotToDoot.bind(this)
 	}
 
-	toUpDoot(event) {
-		if this.state.upDoot == true
-		this.state.review.doot_score += 1
-		this.setState( { reviews: this.state.reviews } )
+	// componentDidMount() {
+	// 	fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
+	// 		credentials: 'same-origin'
+	// 	})
+	// 		.then(response => {
+	// 			if (response.ok) {
+	// 				return response
+	// 			} else {
+	// 				let errorMessage = `${response.status} (${response.statusText})`,
+	// 					error = new Error(errorMessage)
+	// 				throw error
+	// 			}
+	// 		})
+	// 		.then(response => response.json())
+	// 		.then(data => {
+	// 			this.setState( { FIX } )
+	// 		})
+	// 		.catch(error => console.error(`Error in fetch: ${error.message}`))
+	// }
+
+	componentWillUnmount() {
+		fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
+			method: 'post',
+			body: JSON.stringify(this.state.review.doot_score),
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json' },
+			credentials: 'same-origin'
+		})
+			.then(response => {
+				if (response.ok) {
+					return response
+				} else {
+					let errorMessage = `${response.status} (${response.statusText})`,
+						error = new Error(errorMessage)
+					throw error
+				}
+			})
+			.then(response => response.json())
+			.then(response => {
+				this.setState( { review:})
+			})
+			.catch(error => console.error(`Error in fetch: ${error.message}`))
 	}
 
-	toDownDoot(event) {
+	toDootOrNotToDoot(event) {
+		if (this.state.doot_boolean === true) {
+			this.state.review.doot_score += 1
+			this.setState( { reviews: this.state.reviews } )	
+		} else if (this.state.doot_boolean === false) {
+			this.state.review.doot_score -= 1
+			this.setState( { reviews: this.state.reviews } )
+		}
+	}
 
+	upDoot(event) {
+		this.setState( { doot_boolean: true } )
+		this.toDootOrNotToDoot()
+	}
+
+	downDoot(event) {
+		this.setState( { doot_boolean: false } )
+		this.toDootOrNotToDoot()
 	}
 
 	render() {
-		let toUpDoot = () => this.toUpDoot(event)
+		debugger
+		let upDoot = () => this.upDoot(event)
+		let downDoot = () => this.downDoot(event)
 		return(
 			<div key={this.state.review.id}>
-				<i className="fa fa-arrow-up fa-2x" onClick={toUpDoot}></i>
+				<i className="fa fa-arrow-up fa-2x" onClick={this.upDoot}></i>
 				<p>{this.state.review.doot_score}</p>
-				<i className="fa fa-arrow-down fa-2x"></i>
+				<i className="fa fa-arrow-down fa-2x" onClick={this.downDoot}></i>
 
 
 				<li>
