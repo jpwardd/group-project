@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import ReviewFormContainer from './ReviewFormContainer'
-import ReviewShowTile from '../components/ReviewShowTile'
+import ReviewShowTileContainer from './ReviewShowTileContainer'
 
 class ReviewShowContainer extends Component {
 	constructor(props) {
@@ -60,25 +60,12 @@ class ReviewShowContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
-	upDoot(event) {
-		this.state.review.doot_score += 1
-		this.setState( { reviews: this.state.reviews } )
-	}
-
-	downDoot(event) {
-
-	}
-
 	render() {
     let reviews = this.state.reviews.map((review) => {
     	return(
-	      <ReviewShowTile
+	      <ReviewShowTileContainer
           key={review.id}
-          id={review.id}
-	        donutReview={review.donut_review}
-	        coffeeReview={review.coffee_review}
-	        shopReview={review.shop_review}
-					doot_score={review.doot_score}
+          review={review}
 	      />
       )
     })
