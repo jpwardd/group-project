@@ -11,7 +11,7 @@ class Api::V1::ReviewsController < ApplicationController
 
 	def show
 		reviews = Review.find(params[:id])
-		render json: reviews
+		render json: ReviewSerializer.new(reviews, { scope: current_user })
 	end
 
 	def create
@@ -28,7 +28,7 @@ class Api::V1::ReviewsController < ApplicationController
 	end
 
 	def destroy
-		if authorize_delete
+		if authorize_delete?
 			Review.destroy(params[:id])
 		else
 			render json: {error: "You are not authorized."}
@@ -38,14 +38,8 @@ class Api::V1::ReviewsController < ApplicationController
 
 	private
 
-	def authorize_delete
-		# binding.pry
-		# if current_user == Review.find(params[:id]).user || current_user.admin?
-		# 	# raise ActionController::RoutingError.new("Not Found")
-		# else
-		# 	raise ActionController::RoutingError.new("Not Found")
-		# end
-		 current_user == Review.find(params[:id]).user || current_user.admin?
+	def authorize_delete?
+		current_user == Review.find(params[:id]).user || current_user.admin?
 	end
 
 	def review_params

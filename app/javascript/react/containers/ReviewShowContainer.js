@@ -93,6 +93,8 @@ class ReviewShowContainer extends Component {
   }
 
 	render() {
+		debugger
+
     let reviews = this.state.reviews.map((review) => {
     	return(
 	      <ReviewShowTile
@@ -104,6 +106,9 @@ class ReviewShowContainer extends Component {
 					handleDelete={this.handleDelete}
 					firstName={review.user.first_name}
 					lastName={review.user.last_name}
+					userId={review.user.id}
+					currentUserRole={review.current_user_role}
+					currentUser={review.current_user_id}
 	      />
       )
     })

@@ -8,10 +8,11 @@ Rails.application.routes.draw do
       resources :shops, only: [:index, :show, :create] do
         resources :reviews, only: [:index, :show, :destroy, :create]
       end
-
   	end
   end
 
- 	get "*path", to: "homes#index"
+  get "/", to: "homes#index"
+  get "/shops", to: "homes#index"
+  get "/shops/:id", to: "homes#index"
 
 end

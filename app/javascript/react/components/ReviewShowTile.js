@@ -7,6 +7,11 @@ const ReviewShowTile = (props) => {
 		props.handleDelete(props.id)
 	}
 
+	let deleteButton
+
+	if((props.userId == props.currentUser) || props.currentUserRole === "admin") {
+		deleteButton = <button onClick={deleteReview}>Delete</button>
+	}
 
 	return(
 		<div key={props.id} className="row review-container">
@@ -20,7 +25,7 @@ const ReviewShowTile = (props) => {
 					<blockquote className="cite">
 						<cite>{props.firstName} {props.lastName}</cite>
 					</blockquote>
-					<button onClick={deleteReview}>Delete</button>
+					{deleteButton}
 			</div>
 		</div>
 	)
