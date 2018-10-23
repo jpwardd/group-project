@@ -31,7 +31,7 @@ class Api::V1::ReviewsController < ApplicationController
 		if authorize_delete?
 			Review.destroy(params[:id])
 		else
-			render json: {error: "You are not authorized."}
+			render json: {error: "You are not authorized!"}
 		end
 	end
 

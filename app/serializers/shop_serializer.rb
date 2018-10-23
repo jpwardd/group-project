@@ -1,3 +1,4 @@
 class ShopSerializer < ActiveModel::Serializer
-  attributes :id, :users, :reviews, :name, :address, :city, :state, :zip, :phone_number
+  attributes :id, :name, :address, :city, :state, :zip, :phone_number
+  has_many :reviews
 end

@@ -7,7 +7,7 @@ class Api::V1::ShopsController < ApplicationController
 
 	def show
 		shop = Shop.find(params[:id])
-		render json: Shop.all
+		render json: shop
 	end
 
  end
