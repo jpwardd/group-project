@@ -14,6 +14,8 @@ class ReviewShowTileContainer extends Component{
 		this.toDootOrNotToDoot = this.toDootOrNotToDoot.bind(this)
 	}
 
+	// compare & contrast userid to determine if current review has already been voted on
+	//
 	// componentDidMount() {
 	// 	fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
 	// 		credentials: 'same-origin'
@@ -34,10 +36,10 @@ class ReviewShowTileContainer extends Component{
 	// 		.catch(error => console.error(`Error in fetch: ${error.message}`))
 	// }
 
-	componentWillUnmount() {
+	toDootOrNotToDoot() {
 		fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
-			method: 'post',
-			body: JSON.stringify(this.state.review.doot_score),
+			method: 'PUT',
+			body: JSON.stringify(this.state.review),
 			headers: {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json' },
@@ -54,33 +56,25 @@ class ReviewShowTileContainer extends Component{
 			})
 			.then(response => response.json())
 			.then(response => {
-				this.setState( { review:})
 			})
 			.catch(error => console.error(`Error in fetch: ${error.message}`))
 	}
 
-	toDootOrNotToDoot(event) {
-		if (this.state.doot_boolean === true) {
-			this.state.review.doot_score += 1
-			this.setState( { reviews: this.state.reviews } )	
-		} else if (this.state.doot_boolean === false) {
-			this.state.review.doot_score -= 1
-			this.setState( { reviews: this.state.reviews } )
-		}
-	}
-
 	upDoot(event) {
 		this.setState( { doot_boolean: true } )
+		this.state.review.doot_score += 1
+		this.setState( { reviews: this.state.reviews } )	
 		this.toDootOrNotToDoot()
 	}
 
 	downDoot(event) {
 		this.setState( { doot_boolean: false } )
+		this.state.review.doot_score -= 1
+		this.setState( { reviews: this.state.reviews } )
 		this.toDootOrNotToDoot()
 	}
 
 	render() {
-		debugger
 		let upDoot = () => this.upDoot(event)
 		let downDoot = () => this.downDoot(event)
 		return(

@@ -9,6 +9,12 @@ class Api::V1::ReviewsController < ApplicationController
 		render json: reviews
 	end
 
+	def show
+		review = Review.find(params[:id])
+
+		render json: review
+	end
+
 	def create
 		review = Review.new(review_params)
 		review.shop = Shop.find(params[:shop_id])
@@ -19,15 +25,15 @@ class Api::V1::ReviewsController < ApplicationController
 		else
 			render json: {error: review.errors.full_messages.join(', ') }, status: :unprocessable_entity
 		end
-
 	end
 
+	def update
+	end
 
 	private
 
 	def review_params
 		params.require(:review).permit(:donut_review, :coffee_review, :shop_review)
 	end
-
 
 end
