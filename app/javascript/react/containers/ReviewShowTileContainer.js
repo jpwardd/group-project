@@ -36,10 +36,10 @@ class ReviewShowTileContainer extends Component{
 	// 		.catch(error => console.error(`Error in fetch: ${error.message}`))
 	// }
 
-	toDootOrNotToDoot() {
+	toDootOrNotToDoot(formPayLoad) {
 		fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
-			method: 'PUT',
-			body: JSON.stringify(this.state.review),
+			method: 'PATCH',
+			body: JSON.stringify(formPayLoad),
 			headers: {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json' },
@@ -55,23 +55,50 @@ class ReviewShowTileContainer extends Component{
 				}
 			})
 			.then(response => response.json())
-			.then(response => {
+			.then(body => {
+				this.setState( { review: body})
 			})
 			.catch(error => console.error(`Error in fetch: ${error.message}`))
 	}
 
 	upDoot(event) {
-		this.setState( { doot_boolean: true } )
-		this.state.review.doot_score += 1
-		this.setState( { reviews: this.state.reviews } )	
-		this.toDootOrNotToDoot()
+		if (this.state.doot_boolean === null) {
+			this.setState( { doot_boolean: true } )
+			this.state.review.doot_score += 1
+		} else if (this.state.doot_boolean === false) {
+			this.setState( { doot_boolean: true } )
+			this.state.review.doot_score += 2
+		} else {
+			this.setState( { doot_boolean: null } )
+			this.state.review.doot_score -= 1
+		}
+		this.setState( { reviews: this.state.reviews } )
+
+		let formPayLoad = {
+			doot_score: this.state.review.doot_score
+		};
+
+		this.toDootOrNotToDoot(formPayLoad)
 	}
 
 	downDoot(event) {
-		this.setState( { doot_boolean: false } )
-		this.state.review.doot_score -= 1
+		if (this.state.doot_boolean === null) {
+			this.setState( { doot_boolean: false } )
+			this.state.review.doot_score -= 1
+		} else if (this.state.doot_boolean === true) {
+			this.setState( { doot_boolean: false } )
+			this.state.review.doot_score -= 2
+		} else {
+			this.setState( { doot_boolean: null } )
+			this.state.review.doot_score += 1
+		}
 		this.setState( { reviews: this.state.reviews } )
-		this.toDootOrNotToDoot()
+
+		let formPayLoad = {
+			doot_score: this.state.review.doot_score
+		};
+
+		this.toDootOrNotToDoot(formPayLoad)
 	}
 
 	render() {

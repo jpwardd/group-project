@@ -1,7 +1,7 @@
 
 class Api::V1::DootsController < ApplicationController
-	
-  def index
+
+  def update
     review = Doot.find(params[:review_id])
     doots = review.doots
 

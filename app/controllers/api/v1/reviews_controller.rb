@@ -28,12 +28,17 @@ class Api::V1::ReviewsController < ApplicationController
 	end
 
 	def update
+		review = Review.find(params[:id])
+
+		if review.update(review_params)
+			render json: review
+		end
 	end
 
 	private
 
 	def review_params
-		params.require(:review).permit(:donut_review, :coffee_review, :shop_review)
+		params.require(:review).permit(:donut_review, :coffee_review, :shop_review, :doot_score, :user_doot)
 	end
 
 end
