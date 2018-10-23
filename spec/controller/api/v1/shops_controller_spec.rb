@@ -29,7 +29,7 @@ require 'rails_helper'
 
  			expect(returned_json[2]['name']).to eq 'Sip-N-Dip Donuts'
 			expect(returned_json[2]['city']).to eq 'Fall River'
-			
+
  			expect(returned_json[3]['address']).to eq '864 State Rd'
 			expect(returned_json[3]['phone_number']).to eq '5089922145'
 
@@ -37,12 +37,11 @@ require 'rails_helper'
 	end
 
 	describe "GET#show" do
-	
+
 		it 'should return a single shop with the name, address, city, state, zip, phone number' do
 		get :show, params: {id: fifth_shop.id}
-		
-		returned_json = JSON.parse(response.body)
 
+		returned_json = JSON.parse(response.body)
 			expect(response.status).to eq 200
 			expect(response.content_type).to eq ('application/json')
 			expect(returned_json["id"]).to eq fifth_shop.id
