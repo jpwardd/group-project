@@ -75,7 +75,8 @@ class ReviewShowTileContainer extends Component{
 		this.setState( { reviews: this.state.reviews } )
 
 		let formPayLoad = {
-			doot_score: this.state.review.doot_score
+			doot_score: this.state.review.doot_score,
+			user_doot: this.state.doot_boolean
 		};
 
 		this.toDootOrNotToDoot(formPayLoad)

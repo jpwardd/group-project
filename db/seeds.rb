@@ -11,8 +11,9 @@ shop2 = Shop.create(name: 'Blackbird Doughnuts', address: '492 Tremont St', city
 shop3 = Shop.create(name: 'Holy Donut', address: '7 Exchange St', city: 'Portland', state: 'ME', zip: '04101', phone_number: '2077757776')
 
 user1 = User.create(first_name: 'Timothy', last_name: 'Johnson', city: 'Birmingham', state: 'AL', email: 'tj@gmail.com', password: 'movegetouttheway')
+user2 = User.create(first_name: 'Flying', last_name: 'Narwhals', city: 'Boston', state: 'MA', email: 'fn@aol.com', password: '123456')
 
 review1 = Review.create(user_id: 1, shop_id: 2, donut_review: 'Yum yum', coffee_review: 'Good good', shop_review: 'Everything was fantastic, my experience was superb and the staff went above and beyond the requirements set by social standards')
 
-doots1 = Doot.create(user_id: 1, review_id: 1, user_doot: nil, comment: "This review sucks!")
-doots1 = Doot.create(user_id: 1, review_id: 1, user_doot: nil, comment: "JK LOLOLOLOL")
+doots1 = Doot.create(user_id: 1, review_id: 1, user_doot: nil)
+doots1 = Doot.create(user_id: 2, review_id: 1, user_doot: nil)

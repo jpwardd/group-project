@@ -29,8 +29,12 @@ class Api::V1::ReviewsController < ApplicationController
 
 	def update
 		review = Review.find(params[:id])
+		review.user = current_user
+
+
 
 		if review.update(review_params)
+			binding.pry
 			render json: review
 		end
 	end

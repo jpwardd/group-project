@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_22_143133) do
+ActiveRecord::Schema.define(version: 2018_10_23_195303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 2018_10_22_143133) do
     t.bigint "user_id", null: false
     t.bigint "review_id", null: false
     t.boolean "user_doot"
-    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["review_id"], name: "index_doots_on_review_id"
+    t.index ["user_id", "review_id", "user_doot"], name: "index_doots_on_user_id_and_review_id_and_user_doot", unique: true
     t.index ["user_id"], name: "index_doots_on_user_id"
   end
 
