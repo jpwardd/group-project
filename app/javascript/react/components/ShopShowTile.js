@@ -6,7 +6,8 @@ const ShopShowTile = (props) => {
 			<div className="medium-6 columns">
 				<img className="thumbnail" src={"https://placehold.it/650x350"}	/>
 			<button className="map-button warning">map</button>
-		</div>
+			</div>
+
 			<div className="row medium-6 large-5 columns">
 				<h1>{props.name}</h1>
 				<p>{props.address}</p>

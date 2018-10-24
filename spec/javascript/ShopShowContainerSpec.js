@@ -1,29 +1,53 @@
 import ShopShowContainer from "../../app/javascript/react/containers/ShopShowContainer";
 import ShopShowTile from "../../app/javascript/react/components/ShopShowTile";
-import { mount } from 'enzyme'
-import jasmineEnzyme from 'jasmine-enzyme'
+// import jasmineEnzyme from 'jasmine-enzyme'
 import fetchMock from 'fetch-mock'
 
 describe("ShopShowContainer", () => {
   let wrapper;
-  let shops;
+  let shop;
+
   beforeEach(() => {
 
     jasmineEnzyme();
-    shops = {
+
+    shop = {
       id: 2,
       name: "Dunkin' Donuts",
       address: "1 Summer Street",
       city: "Boston",
       state: "MA",
       zip: "02110",
-      phone_number: "6174262817"
+      phone_number: "6174262817",
+      reviews: [
+        {
+          id: 40,
+          donut_review: "Good",
+          coffee_review: "Delicious",
+          shop_review: "They're everywhere",
+          user: {
+            id: 4,
+            first_name: "Admin",
+            last_name: "Kim",
+            city: "Boston",
+            state: "MA",
+            email: "meanniekim@gmail.com",
+            role: "admin"
+          }
+        }
+      ]
     };
-    fetchMock.get(`/api/v1/shops/${shops.id}`, {
+
+    fetchMock.get(`/api/v1/shops/${shop.id}`, {
       status: 200,
-      body: shops
+      body: shop
     });
-    wrapper = mount(<ShopShowContainer params={{ id: 2 }}/>);
+
+    wrapper = mount(
+      <ShopShowContainer
+        params={ { id: 2 } }
+      />
+    );
   });
 
   afterEach(fetchMock.restore);
@@ -37,10 +61,10 @@ describe("ShopShowContainer", () => {
     });
   });
   it('should have the specified initial state', () => {
-    expect(wrapper.state()).toEqual({ shop: {} });
+    expect(wrapper.state()).toEqual({ shop: {}, reviews: [] });
   })
   it('should render the ShopShowTile Component with specific props', () => {
-      wrapper.setState({ shop: shops });
+      wrapper.setState({ shop: shop, reviews: shop.reviews });
       expect(wrapper.find(ShopShowTile).props()).toEqual({
         id: 2,
         name: "Dunkin' Donuts",
