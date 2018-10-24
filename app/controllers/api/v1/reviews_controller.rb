@@ -1,5 +1,6 @@
 class Api::V1::ReviewsController < ApplicationController
 	protect_from_forgery unless: -> { request.format.json? }
+	skip_before_action :authenticate_user!
 
 	def index
 		shop = Shop.find(params[:shop_id])
