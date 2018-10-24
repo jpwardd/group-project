@@ -1,6 +1,6 @@
-
 class Api::V1::ReviewsController < ApplicationController
 	protect_from_forgery unless: -> { request.format.json? }
+
 
 	def index
 		shop = Shop.find(params[:shop_id])
@@ -10,9 +10,8 @@ class Api::V1::ReviewsController < ApplicationController
 	end
 
 	def show
-		review = Review.find(params[:id])
-
-		render json: review
+		reviews = Review.find(params[:id])
+		render json: ReviewSerializer.new(reviews, { scope: current_user })
 	end
 
 	def create
@@ -31,18 +30,34 @@ class Api::V1::ReviewsController < ApplicationController
 		review = Review.find(params[:id])
 		review.user = current_user
 
-
-
 		if review.update(review_params)
-			binding.pry
 			render json: review
 		end
 	end
 
+	def destroy
+		if authorize_delete?
+			Review.destroy(params[:id])
+		else
+			render json: {error: "You are not authorized!"}
+		end
+	end
+
+
 	private
 
-	def review_params
-		params.require(:review).permit(:donut_review, :coffee_review, :shop_review, :doot_score, :user_doot)
+	def authorize_delete?
+		current_user == Review.find(params[:id]).user || current_user.admin?
 	end
+
+	def review_params
+		params.require(:review).permit(:doot_score, :donut_review, :coffee_review, :shop_review, user: current_user)
+	end
+
+  def authorize_user
+    if !user_signed_in? || !current_user.admin?
+      raise ActionController::RoutingError.new("Not Found")
+    end
+  end
 
 end

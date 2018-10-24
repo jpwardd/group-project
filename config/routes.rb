@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
   	namespace :v1 do
       resources :shops, only: [:index, :show, :create] do
-        resources :reviews, only: [:index, :show, :create, :update] do
+        resources :reviews, only: [:index, :show, :create, :update, :destroy] do
           resources :doots, only: [:update]
         end
       end
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
 
  get "/", to: "homes#index"
  get "/shops", to: "homes#index"
- get "/shop/:id", to: "homes#index"
+ get "/shops/:id", to: "homes#index"
 end

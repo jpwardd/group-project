@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { browserHistory, Route, IndexRoute, Router } from 'react-router'
 import ShopIndexContainer from '../containers/ShopIndexContainer'

@@ -12,6 +12,8 @@ shop3 = Shop.create(name: 'Holy Donut', address: '7 Exchange St', city: 'Portlan
 
 user1 = User.create(first_name: 'Timothy', last_name: 'Johnson', city: 'Birmingham', state: 'AL', email: 'tj@gmail.com', password: 'movegetouttheway')
 user2 = User.create(first_name: 'Flying', last_name: 'Narwhals', city: 'Boston', state: 'MA', email: 'fn@aol.com', password: '123456')
+user3 = User.create(first_name: 'Flying', last_name: 'Narwhals', city: 'Boston', state: 'MA', email: 'fnn@aol.com', password: '123456', role: 'admin')
+
 
 review1 = Review.create(user_id: 1, shop_id: 2, donut_review: 'Yum yum', coffee_review: 'Good good', shop_review: 'Everything was fantastic, my experience was superb and the staff went above and beyond the requirements set by social standards')
 

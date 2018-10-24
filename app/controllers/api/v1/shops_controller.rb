@@ -1,4 +1,3 @@
-
 class Api::V1::ShopsController < ApplicationController
 	protect_from_forgery unless: -> { request.format.json? }
 
@@ -7,7 +6,8 @@ class Api::V1::ShopsController < ApplicationController
 	end
 
 	def show
-		render json: Shop.find(params[:id])
+		shop = Shop.find(params[:id])
+		render json: shop
 	end
 
  end

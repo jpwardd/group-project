@@ -1,7 +1,6 @@
+import React, { Component} from 'react'
 
-import React, { Component} from 'react';
-
-class ReviewShowTileContainer extends Component{
+class ReviewDootContainer extends Component{
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -13,28 +12,6 @@ class ReviewShowTileContainer extends Component{
 		this.downDoot = this.downDoot.bind(this)
 		this.toDootOrNotToDoot = this.toDootOrNotToDoot.bind(this)
 	}
-
-	// compare & contrast userid to determine if current review has already been voted on
-	//
-	// componentDidMount() {
-	// 	fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
-	// 		credentials: 'same-origin'
-	// 	})
-	// 		.then(response => {
-	// 			if (response.ok) {
-	// 				return response
-	// 			} else {
-	// 				let errorMessage = `${response.status} (${response.statusText})`,
-	// 					error = new Error(errorMessage)
-	// 				throw error
-	// 			}
-	// 		})
-	// 		.then(response => response.json())
-	// 		.then(data => {
-	// 			this.setState( { FIX } )
-	// 		})
-	// 		.catch(error => console.error(`Error in fetch: ${error.message}`))
-	// }
 
 	toDootOrNotToDoot(formPayLoad) {
 		fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
@@ -72,7 +49,7 @@ class ReviewShowTileContainer extends Component{
 			this.setState( { doot_boolean: null } )
 			this.state.review.doot_score -= 1
 		}
-		this.setState( { reviews: this.state.reviews } )
+		this.setState( { review: this.state.review } )
 
 		let formPayLoad = {
 			doot_score: this.state.review.doot_score,
@@ -93,10 +70,11 @@ class ReviewShowTileContainer extends Component{
 			this.setState( { doot_boolean: null } )
 			this.state.review.doot_score += 1
 		}
-		this.setState( { reviews: this.state.reviews } )
+		this.setState( { review: this.state.review } )
 
 		let formPayLoad = {
-			doot_score: this.state.review.doot_score
+			doot_score: this.state.review.doot_score,
+			user_doot: this.state.doot_boolean
 		};
 
 		this.toDootOrNotToDoot(formPayLoad)
@@ -105,21 +83,36 @@ class ReviewShowTileContainer extends Component{
 	render() {
 		let upDoot = () => this.upDoot(event)
 		let downDoot = () => this.downDoot(event)
+
+		let deleteReview = () => {
+			this.props.handleDelete(this.state.review.id)
+		}
+
+		let deleteButton
+
+		if((this.state.review.user.id == this.state.review.current_user_id) || this.state.review.current_user_role === "admin") {
+			deleteButton = <button onClick={deleteReview}>Delete</button>
+		}
+
 		return(
-			<div key={this.state.review.id}>
+			<div key={this.state.review.id} className="row review-container">
 				<i className="fa fa-arrow-up fa-2x" onClick={this.upDoot}></i>
 				<p>{this.state.review.doot_score}</p>
 				<i className="fa fa-arrow-down fa-2x" onClick={this.downDoot}></i>
 
 
-				<li>
-					<p>{this.state.review.donut_review}</p>
-					<p>{this.state.review.coffee_review}</p>
-					<p>{this.state.review.shop_review}</p>
-				</li>
+				<ul className="no-bullet list">
+					<li><strong>Donut Review:</strong> {this.state.review.donut_review}</li>
+					<li><strong>Coffee Review:</strong> {this.state.review.coffee_review}</li>
+					<li><strong>Shop Review:</strong> {this.state.review.shop_review}</li>
+				</ul>
+				<blockquote className="cite">
+					<cite>{this.state.review.user.first_name} {this.state.review.user.last_name}</cite>
+				</blockquote>
+				{deleteButton}
 			</div>
 		)
 	}
 }
 
-export default ReviewShowTileContainer
+export default ReviewDootContainer
