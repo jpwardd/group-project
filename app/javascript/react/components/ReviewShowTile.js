@@ -1,8 +1,6 @@
-
 import React from 'react'
 
 const ReviewShowTile = (props) => {
-
 	let deleteReview = () => {
 		props.handleDelete(props.id)
 	}
