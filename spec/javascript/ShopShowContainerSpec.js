@@ -53,7 +53,6 @@ describe("ShopShowContainer", () => {
   afterEach(fetchMock.restore);
 
   describe("show page", () => {
-    debugger;
     it("should render a ShopShowTile component", done => {
       setTimeout(() => {
         expect(wrapper.find(ShopShowTile)).toBePresent();
