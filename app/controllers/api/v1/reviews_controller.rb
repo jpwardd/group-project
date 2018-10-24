@@ -1,7 +1,6 @@
 class Api::V1::ReviewsController < ApplicationController
 	protect_from_forgery unless: -> { request.format.json? }
 
-
 	def index
 		shop = Shop.find(params[:shop_id])
 		reviews = shop.reviews
@@ -24,6 +23,7 @@ class Api::V1::ReviewsController < ApplicationController
 		else
 			render json: {error: review.errors.full_messages.join(', ') }, status: :unprocessable_entity
 		end
+<<<<<<< HEAD
 	end
 
 	def update
@@ -33,6 +33,8 @@ class Api::V1::ReviewsController < ApplicationController
 		if review.update(review_params)
 			render json: review
 		end
+=======
+>>>>>>> 1b1299fab7042dfb4c30f79b0dff5cc924325ca1
 	end
 
 	def destroy
@@ -45,7 +47,6 @@ class Api::V1::ReviewsController < ApplicationController
 
 
 	private
-
 	def authorize_delete?
 		current_user == Review.find(params[:id]).user || current_user.admin?
 	end

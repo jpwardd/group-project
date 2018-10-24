@@ -3,7 +3,6 @@ import ReviewFormContainer from './ReviewFormContainer'
 import ReviewDootContainer from './ReviewDootContainer'
 
 const ReviewShowContainer = (props) => {
-
     let reviews = props.reviews.map((review) => {
     	return(
 	      <ReviewDootContainer

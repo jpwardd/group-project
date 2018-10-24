@@ -9,9 +9,7 @@ require 'rails_helper'
 	let!(:fifth_shop) {Shop.create(name: 'Dunkin\' Donuts', address: '101 Summer Street', city: 'Boston', state: 'MA', zip: '02110', phone_number: '6173388141' )}
 
  	describe 'GET#index' do
-
 		it 'should return a list of all the shops' do
-
  			get :index
 
 			returned_json = JSON.parse(response.body)
@@ -31,12 +29,10 @@ require 'rails_helper'
 
  			expect(returned_json[3]['address']).to eq '864 State Rd'
 			expect(returned_json[3]['phone_number']).to eq '5089922145'
-
  		end
 	end
 
 	describe "GET#show" do
-
 		it 'should return a single shop with the name, address, city, state, zip, phone number' do
 		get :show, params: {id: fifth_shop.id}
 

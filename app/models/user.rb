@@ -70,5 +70,8 @@ class User < ApplicationRecord
   def admin?
     role == "admin"
   end
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1b1299fab7042dfb4c30f79b0dff5cc924325ca1
 end
