@@ -1,0 +1,48 @@
+
+class Api::V1::ReviewsController < ApplicationController
+	protect_from_forgery unless: -> { request.format.json? }
+
+	def index
+		shop = Shop.find(params[:shop_id])
+		reviews = shop.reviews
+
+		render json: reviews
+	end
+
+	def show
+		review = Review.find(params[:id])
+
+		render json: review
+	end
+
+	def create
+		review = Review.new(review_params)
+		review.shop = Shop.find(params[:shop_id])
+		review.user = current_user
+
+		if review.save
+			render json: review
+		else
+			render json: {error: review.errors.full_messages.join(', ') }, status: :unprocessable_entity
+		end
+	end
+
+	def update
+		review = Review.find(params[:id])
+		review.user = current_user
+
+
+
+		if review.update(review_params)
+			binding.pry
+			render json: review
+		end
+	end
+
+	private
+
+	def review_params
+		params.require(:review).permit(:donut_review, :coffee_review, :shop_review, :doot_score, :user_doot)
+	end
+
+end
