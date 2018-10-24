@@ -1,11 +1,11 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 import ReviewFormContainer from './ReviewFormContainer'
 import ReviewShowTile from '../components/ReviewShowTile'
 
-const ReviewShowContainer = (props) =>  {
+const ReviewShowContainer = (props) => {
 
-	let reviews = this.props.reviews.map((review) => {
+	let reviews = props.reviews.map((review) => {
 		return(
 			<ReviewShowTile
 				key={review.id}
@@ -13,7 +13,7 @@ const ReviewShowContainer = (props) =>  {
 				donutReview={review.donut_review}
 				coffeeReview={review.coffee_review}
 				shopReview={review.shop_review}
-				handleDelete={this.props.handleDelete}
+				handleDelete={props.handleDelete}
 				firstName={review.user.first_name}
 				lastName={review.user.last_name}
 				userId={review.user.id}
@@ -22,14 +22,17 @@ const ReviewShowContainer = (props) =>  {
 			/>
 		)
 	})
-	return(
-		<div>
-      <ReviewFormContainer
-        addNewReview={this.props.addNewReview}
-      />
-			{reviews}
-    </div>
-	)
+
+
+		return(
+			<div>
+				<ReviewFormContainer
+					addNewReview={props.addNewReview}
+				/>
+				{reviews}
+			</div>
+		)
 }
+
 
 export default ReviewShowContainer

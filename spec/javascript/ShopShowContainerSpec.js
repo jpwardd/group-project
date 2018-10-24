@@ -1,15 +1,16 @@
 import ShopShowContainer from "../../app/javascript/react/containers/ShopShowContainer";
 import ShopShowTile from "../../app/javascript/react/components/ShopShowTile";
-import { mount } from 'enzyme'
-import jasmineEnzyme from 'jasmine-enzyme'
+// import jasmineEnzyme from 'jasmine-enzyme'
 import fetchMock from 'fetch-mock'
 
 describe("ShopShowContainer", () => {
   let wrapper;
   let shop;
+
   beforeEach(() => {
 
     jasmineEnzyme();
+
     shop = {
       id: 2,
       name: "Dunkin' Donuts",
@@ -36,16 +37,23 @@ describe("ShopShowContainer", () => {
         }
       ]
     };
+
     fetchMock.get(`/api/v1/shops/${shop.id}`, {
       status: 200,
       body: shop
     });
-    wrapper = mount(<ShopShowContainer params={{ id: 2 }}/>);
+
+    wrapper = mount(
+      <ShopShowContainer
+        params={ { id: 2 } }
+      />
+    );
   });
 
   afterEach(fetchMock.restore);
 
   describe("show page", () => {
+    debugger;
     it("should render a ShopShowTile component", done => {
       setTimeout(() => {
         expect(wrapper.find(ShopShowTile)).toBePresent();
