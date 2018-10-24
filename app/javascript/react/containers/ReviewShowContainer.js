@@ -1,10 +1,8 @@
-
 import React from 'react'
 import ReviewFormContainer from './ReviewFormContainer'
 import ReviewShowTile from '../components/ReviewShowTile'
 
 const ReviewShowContainer = (props) => {
-
 	let reviews = props.reviews.map((review) => {
 		return(
 			<ReviewShowTile

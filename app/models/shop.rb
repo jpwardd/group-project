@@ -1,5 +1,4 @@
 class Shop < ApplicationRecord
-
 	has_many :reviews
 	has_many :users, through: :reviews
 
@@ -8,5 +7,4 @@ class Shop < ApplicationRecord
 	validates :city, presence: true
 	validates :state, presence: true
 	validates :zip, presence: true
-
 end
