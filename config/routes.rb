@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
@@ -14,7 +13,13 @@ Rails.application.routes.draw do
   	end
   end
 
+<<<<<<< HEAD
 
  	get "*path", to: "homes#index"
 
+=======
+ get "/", to: "homes#index"
+ get "/shops", to: "homes#index"
+ get "/shop/:id", to: "homes#index"
+>>>>>>> 522586064a7d95cb7555e0cfe00e83449abb4f75
 end
