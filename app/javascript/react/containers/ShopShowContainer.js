@@ -35,7 +35,6 @@ class ShopShowContainer extends Component {
 
   render() {
   	return(
-<<<<<<< HEAD
       <div>
     		<ShopShowTile
     			key={this.state.shop.id}
@@ -51,18 +50,6 @@ class ShopShowContainer extends Component {
           shopId={this.props.params.id}
         />
       </div>
-=======
-  		<ShopShowTile
-  			key={this.state.shop.id}
-  			id={this.state.shop.id}
-  			name={this.state.shop.name}
-  			address={this.state.shop.address}
-  			city={this.state.shop.city}
-  			state={this.state.shop.state}
-  			zip={this.state.shop.zip}
-  			phoneNumber={this.state.shop.phone_number}
-  		/>
->>>>>>> 522586064a7d95cb7555e0cfe00e83449abb4f75
 		)
   }
 }
