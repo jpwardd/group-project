@@ -23,7 +23,6 @@ class Api::V1::ReviewsController < ApplicationController
 		else
 			render json: {error: review.errors.full_messages.join(', ') }, status: :unprocessable_entity
 		end
-<<<<<<< HEAD
 	end
 
 	def update
@@ -33,8 +32,6 @@ class Api::V1::ReviewsController < ApplicationController
 		if review.update(review_params)
 			render json: review
 		end
-=======
->>>>>>> 1b1299fab7042dfb4c30f79b0dff5cc924325ca1
 	end
 
 	def destroy

@@ -7,8 +7,4 @@ class Shop < ApplicationRecord
 	validates :city, presence: true
 	validates :state, presence: true
 	validates :zip, presence: true
-<<<<<<< HEAD
-
-=======
->>>>>>> 1b1299fab7042dfb4c30f79b0dff5cc924325ca1
 end
