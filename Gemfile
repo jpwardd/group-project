@@ -61,6 +61,7 @@ gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails', '~> 5.0'
 gem 'webpacker', '~> 3.3'
+gem 'font-awesome-rails'
 gem 'active_model_serializers'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'

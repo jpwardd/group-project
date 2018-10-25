@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react'
 import ShopIndexTile from '../components/ShopIndexTile'
 
@@ -11,9 +10,9 @@ class ShopIndexContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/shops', 
+    fetch('/api/v1/shops',
     {
-      credentials: 'same-origin', 
+      credentials: 'same-origin',
     })
       .then(response => {
         if (response.ok) {

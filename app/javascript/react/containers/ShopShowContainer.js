@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import ShopShowTile from '../components/ShopShowTile'
 import ReviewShowContainer from './ReviewShowContainer'
@@ -111,7 +110,6 @@ class ShopShowContainer extends Component {
     })
   }
 
-
   render() {
   	return(
       <div>
@@ -126,6 +124,7 @@ class ShopShowContainer extends Component {
     			phoneNumber={this.state.shop.phone_number}
     		/>
 				<ReviewShowContainer
+					shopId={this.state.shop.id}
 					reviews={this.state.reviews}
 					addNewReview={this.addNewReview}
 					handleDelete={this.handleDelete}

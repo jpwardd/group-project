@@ -1,26 +1,18 @@
 import React from 'react'
 import ReviewFormContainer from './ReviewFormContainer'
-import ReviewShowTile from '../components/ReviewShowTile'
+import ReviewDootContainer from './ReviewDootContainer'
 
 const ReviewShowContainer = (props) => {
-	let reviews = props.reviews.map((review) => {
-		return(
-			<ReviewShowTile
-				key={review.id}
-				id={review.id}
-				donutReview={review.donut_review}
-				coffeeReview={review.coffee_review}
-				shopReview={review.shop_review}
-				handleDelete={props.handleDelete}
-				firstName={review.user.first_name}
-				lastName={review.user.last_name}
-				userId={review.user.id}
-				currentUserRole={review.current_user_role}
-				currentUser={review.current_user_id}
-			/>
-		)
-	})
-
+    let reviews = props.reviews.map((review) => {
+    	return(
+	      <ReviewDootContainer
+					review={review}
+          key={review.id}
+					shopId={props.shopId}
+					handleDelete={props.handleDelete}
+	      />
+      )
+    })
 
 		return(
 			<div>

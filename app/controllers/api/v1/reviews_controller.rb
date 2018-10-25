@@ -1,5 +1,6 @@
 class Api::V1::ReviewsController < ApplicationController
 	protect_from_forgery unless: -> { request.format.json? }
+	skip_before_action :authenticate_user!
 
 	def index
 		shop = Shop.find(params[:shop_id])
@@ -25,6 +26,15 @@ class Api::V1::ReviewsController < ApplicationController
 		end
 	end
 
+	def update
+		review = Review.find(params[:id])
+		review.user = current_user
+
+		if review.update(review_params)
+			render json: review
+		end
+	end
+
 	def destroy
 		if authorize_delete?
 			Review.destroy(params[:id])
@@ -40,7 +50,7 @@ class Api::V1::ReviewsController < ApplicationController
 	end
 
 	def review_params
-		params.require(:review).permit(:donut_review, :coffee_review, :shop_review, user: current_user)
+		params.require(:review).permit(:doot_score, :donut_review, :coffee_review, :shop_review, user: current_user)
 	end
 
   def authorize_user
