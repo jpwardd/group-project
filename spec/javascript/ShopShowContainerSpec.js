@@ -19,6 +19,7 @@ describe("ShopShowContainer", () => {
       state: "MA",
       zip: "02110",
       phone_number: "6174262817",
+      imageUrl: undefined,
       reviews: [
         {
           id: 40,
@@ -72,7 +73,8 @@ describe("ShopShowContainer", () => {
         city: "Boston",
         state: "MA",
         zip: "02110",
-        phoneNumber: "6174262817"
+        phoneNumber: "6174262817",
+        imageUrl: undefined
       })
     })
 });
