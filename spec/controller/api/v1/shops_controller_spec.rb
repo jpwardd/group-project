@@ -2,11 +2,12 @@ require 'rails_helper'
 
  RSpec.describe Api::V1::ShopsController, type: :controller do
 
- 	let!(:first_shop) { Shop.create(name: 'Union Square Donuts', address: '20 Bow St', city: 'Somerville', state: 'MA', zip: '02143', phone_number: '6172092257') }
-	let!(:second_shop) { Shop.create(name: 'Kane\'s Donuts in Boston', address: '90 Oliver St', city: 'Boston', state: 'MA', zip: '02110', phone_number: '8573172654') }
+	let!(:first_shop) {Shop.create(name: 'Dunkin\' Donuts', address: '101 Summer Street', city: 'Boston', state: 'MA', zip: '02110', phone_number: '6173388141' )}
+	let!(:second_shop) { Shop.create(name: 'Kane\'s Donuts in Boston', address: '90 Oliver St', city: 'Boston', state: 'MA', zip: '02110', phone_number: '8573172654, ') }
 	let!(:third_shop) { Shop.create(name: 'Sip-N-Dip Donuts', address: '2175 S Main St', city: 'Fall River', state: 'MA', zip: '02724', phone_number: '5086774847') }
 	let!(:fourth_shop) { Shop.create(name: 'Towne Donut Shop', address: '864 State Rd', city: 'North Dartmouth', state: 'MA', zip: '02747', phone_number: '5089922145') }
-	let!(:fifth_shop) {Shop.create(name: 'Dunkin\' Donuts', address: '101 Summer Street', city: 'Boston', state: 'MA', zip: '02110', phone_number: '6173388141' )}
+	let!(:fifth_shop)  { Shop.create(name: 'Union Square Donuts', address: '20 Bow St', city: 'Somerville', state: 'MA', zip: '02143', phone_number: '6172092257, ') }
+
 
  	describe 'GET#index' do
 		it 'should return a list of all the shops' do
@@ -18,8 +19,8 @@ require 'rails_helper'
 			expect(response.content_type).to eq 'application/json'
  			expect(returned_json.length).to eq 5
 
-			expect(returned_json[0]['name']).to eq 'Union Square Donuts'
-			expect(returned_json[0]['address']).to eq '20 Bow St'
+			expect(returned_json[0]['name']).to eq 'Dunkin\' Donuts'
+			expect(returned_json[0]['address']).to eq '101 Summer Street'
 
  			expect(returned_json[1]['address']).to eq '90 Oliver St'
 			expect(returned_json[1]['state']).to eq 'MA'
