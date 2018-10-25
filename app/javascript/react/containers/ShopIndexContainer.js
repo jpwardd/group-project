@@ -31,6 +31,7 @@ class ShopIndexContainer extends Component {
   }
 
   render() {
+
     let shops = this.state.shops.map((shop) => {
       return(
       <ShopIndexTile
@@ -42,10 +43,11 @@ class ShopIndexContainer extends Component {
         state={shop.state}
         zip={shop.zip}
         phoneNumber={shop.phone_number}
+        image={shop.image_url}
       />)
     })
     return(
-      <div>
+      <div className="row">
         {shops}
       </div>
       )

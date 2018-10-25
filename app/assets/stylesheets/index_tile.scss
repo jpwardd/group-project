@@ -1,0 +1,18 @@
+.index-container{
+	border: 3px solid black;
+	border-radius: 20px;
+	
+}
+
+.columns + .columns:last-child {
+    float: left; 
+    margin: 0;
+    padding: 0;	
+}
+
+img {
+	width: 200px;
+
+}
+
+

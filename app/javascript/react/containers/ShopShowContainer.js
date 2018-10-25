@@ -39,6 +39,7 @@ class ShopShowContainer extends Component {
 						city: data.city,
 						state: data.state,
 						zip: data.zip,
+						image_url: data.image_url,
 						phone_number: data.phone_number,
 						current_user_id: data.current_user_id,
 						current_user_role: data.current_user_role
@@ -111,6 +112,7 @@ class ShopShowContainer extends Component {
   }
 
   render() {
+  	console.log(this.state)
   	return(
       <div>
     		<ShopShowTile
@@ -122,6 +124,7 @@ class ShopShowContainer extends Component {
     			state={this.state.shop.state}
     			zip={this.state.shop.zip}
     			phoneNumber={this.state.shop.phone_number}
+    			imageUrl={this.state.shop.image_url}
     		/>
 				<ReviewShowContainer
 					shopId={this.state.shop.id}
