@@ -64,6 +64,7 @@ class User < ApplicationRecord
   validates_format_of [:first_name, :last_name, :city], {with: /\A[a-zA-Z]+\z/}
   validates :state, inclusion: { in: STATES }
   validates :role, null: false
+  mount_uploader :avatar, AvatarUploader
 
   def admin?
     role == "admin"
