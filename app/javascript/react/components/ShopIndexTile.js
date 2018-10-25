@@ -5,7 +5,7 @@ import { Link } from 'react-router'
   return(
     <div className="index-container callout">
     <div className="bob row">
-      <div className="columns medium-6 small-6 shop-info">
+      <div className="columns medium-6 small-6">
         <img src={props.image} />
       </div>
       <div className="columns medium-6 small-6 shop-info">
