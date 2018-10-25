@@ -10,10 +10,10 @@ class ReviewDootContainer extends Component{
 		}
 		this.upDoot = this.upDoot.bind(this)
 		this.downDoot = this.downDoot.bind(this)
-		this.toDootOrNotToDoot = this.toDootOrNotToDoot.bind(this)
+		this.handleChangeDoot = this.handleChangeDoot.bind(this)
 	}
 
-	toDootOrNotToDoot(formPayLoad) {
+	handleChangeDoot(formPayLoad) {
 		fetch(`/api/v1/shops/${this.props.shopId}/reviews/${this.state.review.id}`, {
 			method: 'PATCH',
 			body: JSON.stringify(formPayLoad),
@@ -56,7 +56,7 @@ class ReviewDootContainer extends Component{
 			user_doot: this.state.doot_boolean
 		};
 
-		this.toDootOrNotToDoot(formPayLoad)
+		this.handleChangeDoot(formPayLoad)
 	}
 
 	downDoot(event) {
@@ -77,13 +77,10 @@ class ReviewDootContainer extends Component{
 			user_doot: this.state.doot_boolean
 		};
 
-		this.toDootOrNotToDoot(formPayLoad)
+		this.handleChangeDoot(formPayLoad)
 	}
 
 	render() {
-		let upDoot = () => this.upDoot(event)
-		let downDoot = () => this.downDoot(event)
-
 		let deleteReview = () => {
 			this.props.handleDelete(this.state.review.id)
 		}
