@@ -47,7 +47,7 @@ class ShopIndexContainer extends Component {
       />)
     })
     return(
-      <div className="row">
+      <div>
         {shops}
       </div>
       )
