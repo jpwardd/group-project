@@ -45,6 +45,16 @@ class ShopIndexContainer extends Component {
 
   render() {
     const { shops, shopFilter } = this.state
+    const filteredShops = this.filterShops(shops).map((shop) => <ShopIndexTile
+      key={shop.id}
+      id={shop.id}
+      name={shop.name}
+      address={shop.address}
+      city={shop.city}
+      state={shop.state}
+      zip={shop.zip}
+      phoneNumber={shop.phone_number}
+    />)
 
     return(
       <div>
@@ -56,18 +66,7 @@ class ShopIndexContainer extends Component {
             onChange={this.handleShopFilterChange}
           />
         </div>
-        {
-          this.filterShops(shops).map((shop) => <ShopIndexTile
-            key={shop.id}
-            id={shop.id}
-            name={shop.name}
-            address={shop.address}
-            city={shop.city}
-            state={shop.state}
-            zip={shop.zip}
-            phoneNumber={shop.phone_number}
-          />)
-        }
+        { filteredShops }
       </div>
       )
   }
