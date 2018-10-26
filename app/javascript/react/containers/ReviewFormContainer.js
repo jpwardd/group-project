@@ -45,9 +45,11 @@ class ReviewFormContainer extends Component {
 
 	render() {
 		return(
-      <div className='row'>
+      <div className='row review-container new-callout'>
         <form onSubmit={this.handleSubmit}>
-
+  
+          <h5 className="text-center"> Add a New Review</h5>
+          <br/>
     			<TextArea
             placeholder="Donut Review"
             name="donutReview"
@@ -69,8 +71,7 @@ class ReviewFormContainer extends Component {
             handleChange={this.handleChange}
           />
 
-          <input className="button" type="submit" value="Submit" />
-
+          <input className="button success" type="submit" value="Submit" />
         </form>
       </div>
 		)
