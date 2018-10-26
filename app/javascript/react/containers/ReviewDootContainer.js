@@ -91,22 +91,34 @@ class ReviewDootContainer extends Component{
 			deleteButton = <button onClick={deleteReview}>Delete</button>
 		}
 
-		return(
-			<div key={this.state.review.id} className="row review-container">
-				<i className="fa fa-arrow-up fa-2x" onClick={this.upDoot}></i>
-				<p>{this.state.review.doot_score}</p>
-				<i className="fa fa-arrow-down fa-2x" onClick={this.downDoot}></i>
+		return (
+				<div key={this.state.review.id} className="row review-container new-callout">
+        <div className="columns medium-1 doots">
+            <i className="fa fa-arrow-up fa-2x" onClick={this.upDoot} />
+            <li className="doot-score no-bullet">{this.state.review.doot_score}</li>
+            <i className="fa fa-arrow-down fa-2x" onClick={this.downDoot} />
+        </div>
 
-				<ul className="no-bullet list">
-					<li><strong>Donut Review:</strong> {this.state.review.donut_review}</li>
-					<li><strong>Coffee Review:</strong> {this.state.review.coffee_review}</li>
-					<li><strong>Shop Review:</strong> {this.state.review.shop_review}</li>
-				</ul>
-				<blockquote className="cite">
-					<cite>{this.state.review.user.first_name} {this.state.review.user.last_name}</cite>
-				</blockquote>
-				{deleteButton}
-			</div>
+        <div className="columns medium-11">
+          <ul className="no-bullet list">
+            <li>
+              <strong>Donut Review:</strong> {this.state.review.donut_review}
+            </li>
+            <li>
+              <strong>Coffee Review:</strong> {this.state.review.coffee_review}
+            </li>
+            <li>
+              <strong>Shop Review:</strong> {this.state.review.shop_review}
+            </li>
+          </ul>
+          <blockquote className="cite">
+            <cite>
+              {this.state.review.user.first_name} {this.state.review.user.last_name}
+            </cite>
+          </blockquote>
+          {deleteButton}
+        </div>
+      </div>
 		)
 	}
 }

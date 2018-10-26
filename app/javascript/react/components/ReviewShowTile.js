@@ -8,13 +8,11 @@ const ReviewShowTile = (props) => {
 	let deleteButton
 
 	if((props.userId == props.currentUser) || props.currentUserRole === "admin") {
-		deleteButton = <button onClick={deleteReview}>Delete</button>
+		deleteButton = <button className="button alert" onClick={deleteReview}>Delete</button>
 	}
 
 	return(
-		<div key={props.id} className="row review-container">
-			<div className="">
-
+		<div key={props.id} className=" row review-container new-callout">
 					<ul className="no-bullet list">
 						<li><strong>Donut Review:</strong> {props.donutReview}</li>
 						<li><strong>Coffee Review:</strong> {props.coffeeReview}</li>
@@ -24,7 +22,6 @@ const ReviewShowTile = (props) => {
 						<cite>{props.firstName} {props.lastName}</cite>
 					</blockquote>
 					{deleteButton}
-			</div>
 		</div>
 	)
 }

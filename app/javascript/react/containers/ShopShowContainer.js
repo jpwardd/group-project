@@ -115,23 +115,23 @@ class ShopShowContainer extends Component {
   	console.log(this.state)
   	return(
       <div>
-    		<ShopShowTile
-    			key={this.state.shop.id}
-    			id={this.state.shop.id}
-    			name={this.state.shop.name}
-    			address={this.state.shop.address}
-    			city={this.state.shop.city}
-    			state={this.state.shop.state}
-    			zip={this.state.shop.zip}
-    			phoneNumber={this.state.shop.phone_number}
-    			imageUrl={this.state.shop.image_url}
-    		/>
-				<ReviewShowContainer
-					shopId={this.state.shop.id}
-					reviews={this.state.reviews}
-					addNewReview={this.addNewReview}
-					handleDelete={this.handleDelete}
-				/>
+					<ShopShowTile
+						key={this.state.shop.id}
+						id={this.state.shop.id}
+						name={this.state.shop.name}
+						address={this.state.shop.address}
+						city={this.state.shop.city}
+						state={this.state.shop.state}
+						zip={this.state.shop.zip}
+						phoneNumber={this.state.shop.phone_number}
+						imageUrl={this.state.shop.image_url}
+						/>
+					<ReviewShowContainer
+						shopId={this.state.shop.id}
+						reviews={this.state.reviews}
+						addNewReview={this.addNewReview}
+						handleDelete={this.handleDelete}
+					/>
       </div>
 		)
   }

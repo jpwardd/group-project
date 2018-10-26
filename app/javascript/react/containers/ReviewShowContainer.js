@@ -19,10 +19,10 @@ const ReviewShowContainer = (props) => {
 
 	return(
 		<div>
+			{reviews}
 			<ReviewFormContainer
 				addNewReview={props.addNewReview}
 			/>
-			{reviews}
 		</div>
 	)
 }

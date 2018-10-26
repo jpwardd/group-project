@@ -3,12 +3,12 @@ import { Link } from 'react-router'
 
  const ShopIndexTile = (props) => {
   return(
-    <div className="index-container callout">
-    <div className="bob row">
-      <div className="columns medium-6 small-6">
+    <div className="container new-callout">
+    <div className="row bob">
+      <div className="columns medium-6 small-12">
         <img className="img" src={props.image} />
       </div>
-      <div className="columns medium-6 small-6 shop-info">
+      <div className="columns medium-6 small-12 shop-info">
         <h1 className="text-left">
           <Link to={`/shops/${props.id}`}>{props.name}</Link>
         </h1>
