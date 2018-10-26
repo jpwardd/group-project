@@ -7,10 +7,9 @@ body{
 .callout{
     border: 2px solid grey;
     border-radius: 20px;
-    margin: 0 5vw;
+    margin: 0 2em;
     background: white;
 }
-
 
 .bob{
     width: 100%;
@@ -18,9 +17,9 @@ body{
 }
 
 .columns + .columns:last-child {
-    float: left; 
+    float: left;
     margin: 0;
-    padding: 0;	
+    padding: 0;
 }
 
 .img {
@@ -34,5 +33,3 @@ body{
     padding: 10;
     margin: 0;
 }
-
-

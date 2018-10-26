@@ -2,6 +2,7 @@ import React from 'react'
 
 const ShopShowTile = (props) => {
 	return(
+
 		<div className="callout">
 			<div className="medium-6 columns">
 			<img className="show-pic" src={props.imageUrl} />
