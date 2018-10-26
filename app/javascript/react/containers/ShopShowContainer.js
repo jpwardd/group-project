@@ -112,7 +112,6 @@ class ShopShowContainer extends Component {
   }
 
   render() {
-  	console.log(this.state)
   	return(
       <div>
 					<ShopShowTile
