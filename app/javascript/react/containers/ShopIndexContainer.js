@@ -33,9 +33,7 @@ class ShopIndexContainer extends Component {
 
   handleShopFilterChange = (e) => {
     const search = e.target.value
-    this.setState({
-      shopFilter: search
-    })
+    this.setState({ shopFilter: search })
   }
 
   filterShops = (shops) => {
@@ -58,7 +56,7 @@ class ShopIndexContainer extends Component {
 
     return(
       <div>
-        <div>
+        <div className="container">
           <input
             type="text"
             value={shopFilter}
