@@ -52,6 +52,7 @@ class ShopIndexContainer extends Component {
       state={shop.state}
       zip={shop.zip}
       phoneNumber={shop.phone_number}
+      image={shop.image_url}
     />)
 
     return(
