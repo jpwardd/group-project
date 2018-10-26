@@ -50,9 +50,9 @@ class ShopShowContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
-	addNewReview(formPayLoad) {
-		let shopId = this.props.params.id
-    fetch(`/api/v1/shops/${this.props.params.id}/reviews`, {
+  addNewReview(formPayLoad) {
+    let shopId = this.props.params.id
+    fetch(`/api/v1/shops/${shopId}/reviews`, {
       method: 'post',
       body: JSON.stringify(formPayLoad),
       headers: {
