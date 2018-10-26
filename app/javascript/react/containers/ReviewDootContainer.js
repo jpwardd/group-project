@@ -97,7 +97,6 @@ class ReviewDootContainer extends Component{
 				<p>{this.state.review.doot_score}</p>
 				<i className="fa fa-arrow-down fa-2x" onClick={this.downDoot}></i>
 
-
 				<ul className="no-bullet list">
 					<li><strong>Donut Review:</strong> {this.state.review.donut_review}</li>
 					<li><strong>Coffee Review:</strong> {this.state.review.coffee_review}</li>
